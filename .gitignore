@@ -1,0 +1,28 @@
+# MkDocs build directory
+/site/
+# MkDocs cache
+/mkdocs_build
+/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+# Virtual environment (if using Python venv)
+.venv/
+venv/
+# Python egg and package files
+*.egg
+*.egg-info/
+dist/
+build/
+# Logs
+*.log
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+# Jupyter Notebook checkpoints (if using Jupyter)
+.ipynb_checkpoints/
+# GitHub Pages deployment branch (if manually deploying)
+gh-pages/
