@@ -2,6 +2,9 @@ site_name: Pure Conjecture
 theme:
   name: "material"
   dark: "true"
+  palette:
+    primary: black  # Change primary color
+    accent: white   # Change accent color
 repo_url: https://github.com/Koruption/pure-conjecture
 site_url: https://Koruption.github.io/pure-conjecture
 markdown_extensions:
