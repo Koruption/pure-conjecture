@@ -2,7 +2,8 @@ site_name: Pure Conjecture
 theme:
   name: "material"
   dark: "true"
-
+repo_url: https://github.com/Koruption/pure-conjecture
+site_url: https://Koruption.github.io/pure-conjecture
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
