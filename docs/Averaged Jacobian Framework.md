@@ -81,7 +81,7 @@ $$
 
 where $\epsilon$ and $\delta$ are coupled shearing constants, and where $\theta_0=\theta$ and $\phi_0=\phi$ and $T^n$ expression for the $n^{th}$ transformation. For a quick visualization I've provided a figure with exaggerated sheering constants $\epsilon =1.4$ and $\delta=1.6$ 
 
-![Tori Deformation](assets/images/Torus_Example.png)
+![Tori Deformation](DeformedTorus.png)
 
 The computed jacobian determinate is $\text{det}(J)=1-\epsilon \delta cos(\phi_n) cos(\theta_n)$ which fluctuates over successive iterations and over points in the region. In a real setting, we'd sample points on the torus by defining a uniform sampling strategy over the parameter space $(θ,ϕ)∈[0,2π]×[0,2π]$. We discretize this space by selecting points according to 
 
