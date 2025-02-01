@@ -20,13 +20,17 @@ $$
 dV' = \int_{\omega}|\text{det J}|dV
 $$
 . This gives us a measure of global change under the transformation, but not yet a local measure for developing a global average. To do this, we note that we are integrating over a region, and hence summing over some smaller region is just a discretization, thus we have
+
 $$
 \sum_{p\in\omega}^{n} |\text{det J}_p|
 $$
+
 where $n\leq\omega$. Since $n$ is the number of points, we can define an average change by simply dividing the sum by $1/n$, hence we can write
+
 $$
 dV_{\text{avg}}' = \frac{1}{\text{vol}(\omega)}\int_{\omega}|\text{det J}|dV
 $$
+
 and we this gives us a way of measuring the average change in a purely computational manner given an analytic transformation $T: M \to N$. Note that for discrete settings as I'll assume are the primary interest, this just becomes a summation with division by $n$.
 
 #### Iterative Mappings
