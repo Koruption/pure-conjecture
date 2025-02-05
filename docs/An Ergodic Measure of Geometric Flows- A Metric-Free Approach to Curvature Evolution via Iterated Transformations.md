@@ -236,12 +236,14 @@ The method could be extended to incorporate more geometric information from the 
 The numerical results demonstrate the power and robustness of our framework when applied to chaotic systems such as the 2D Logistic Map and the Henon Map. These transformations were chosen specifically to showcase how our Expectation Flow method, in conjunction with the Lyapunov exponent estimation, can capture and analyze the long-term behavior of chaotic dynamical systems. Let us discuss the key findings from these results. Since Expectation Flow introduces a new method for measuring transformation stability, traditional error analysis is not well-defined due to the lack of a direct ground truth metric-based counterpart. Instead, we verify numerical stability by ensuring that Expectation Flow produces consistent long-term convergence across multiple trials within chaotic systems.
 
 To validate the theoretical framework, we implemented numerical experiments using 3 different two-dimensional transformation:
-- $T(\theta,\phi)=\left[\theta+\epsilon \sin(\phi), \phi+\delta\sin(\theta)\right]$ where $\epsilon = 1500$ and $\delta = 820$ serve as deformation parameters. We'll call this Example 1. 
-- Logistic Map with Convex Coupling: 
+
+1.  $T(\theta,\phi)=\left[\theta+\epsilon \sin(\phi), \phi+\delta\sin(\theta)\right]$ where $\epsilon = 1500$ and $\delta = 820$ serve as deformation parameters. We'll call this Example 1. 
+
+2. Logistic Map with Convex Coupling: 
 
 $$\begin{align}x_{n+1}=(1-\epsilon)r\,x_n(1-x_n)+\epsilon \,r\,y_n(1-y_n) \\ y_{n+1}=\epsilon\,r\,x_n(1-x_n)+(1-\epsilon)r\,y_n(1-y_n)\end{align}$$
 
-- Henon Map: 
+3. Henon Map: 
 
 $$\begin{gather}x_{n+1}=1-ax^2_n+by_n \\ y_{n+1}=cx_n\end{gather}$$
 
@@ -262,9 +264,11 @@ The framework was implemented using a sampling-based approach to compute average
 <img src="https://raw.githubusercontent.com/Koruption/Ergodic-Measure-of-Geometric-Change/refs/heads/main/Plots/Pointwise_Differences_Under_Iterated_maps.png" alt="My Image" style="display: inline-block; vertical-align: middle; width: 50%; height: auto;">
 </div>
 
-Performance analysis over 10 trials with 2000 samples and 100 mappings shows consistent computation times averaging around 5.5 seconds per trial batch (Figure 1). The slight variations in performance (±100ms) likely result from adaptive sampling and numerical integration procedures.
+##### Note: Figures 1 & 2 from left to right
 
-The observed convergence behavior of the expectation flow aligns with the theoretical boundedness results. The dispersion measure remains finite across iterations, confirming the expectation flow theorem. The expectation flow $E[μ_n]$ shows rapid initial growth followed by convergence to a steady state around value 360 (Figure 3). This behavior suggests that:
+Performance analysis over 10 trials with 2000 samples and 100 mappings showed consistent computation times averaging around 5.5 seconds per trial batch. The slight variations in performance (±100ms) likely result from adaptive sampling and numerical integration procedures.
+
+The observed convergence behavior of the expectation flow aligns with the theoretical boundedness results. The dispersion measure remains finite across iterations, confirming the expectation flow theorem. The expectation flow $E[μ_n]$ shows rapid initial growth followed by convergence to a steady state around value 360 (Figure 1). This behavior suggests that:
 
 9. The transformation induces significant initial geometric deformation
 10. The deformation stabilizes after approximately 100 iterations
@@ -279,7 +283,7 @@ The point-wise differences under iteration (Figure 2) reveal interesting dynamic
 This stability in point-wise differences, combined with the convergent expectation flow, provides numerical evidence for the existence of geometric preservation properties predicted by the Rope Equation.
 
 **Logistic Map**
-The first transformation tested was the Logistic Map with Convex Coupling, a standard chaotic map that exhibits rich dynamical behavior. Figures X and Y show the Expectation Flow and Pointwise Differences for the Logistic Map, respectively. We observe that the expectation flow quickly converges, indicating that the system stabilizes after a number of iterations, as the geometric deformation induced by the transformations reaches an equilibrium.
+The first transformation tested was the Logistic Map with Convex Coupling, a standard chaotic map that exhibits rich dynamical behavior. Figures 3 and 4 show the Expectation Flow and Pointwise Differences for the Logistic Map, respectively. We observe that the expectation flow quickly converges, indicating that the system stabilizes after a number of iterations, as the geometric deformation induced by the transformations reaches an equilibrium.
 
 <div style="display: flex; align-items: center;">
 <img src="https://raw.githubusercontent.com/Koruption/Ergodic-Measure-of-Geometric-Change/refs/heads/main/Plots/Geometric%20Evolution%20Iterative%20Maps%20Logistic%20Maps.png" alt="My Image" style="display: inline-block; vertical-align: middle; width: 50%; height: auto;">
@@ -287,12 +291,14 @@ The first transformation tested was the Logistic Map with Convex Coupling, a sta
 <img src="https://raw.githubusercontent.com/Koruption/Ergodic-Measure-of-Geometric-Change/refs/heads/main/Plots/Pointwise%20Difference%20Logistic%20Map.png" alt="My Image" style="display: inline-block; vertical-align: middle; width: 50%; height: auto;">
 </div>
 
-The **Lyapunov exponent trace**, shown in the figure, converges at a similar rate, confirming that our framework captures the dynamics of the system in both a qualitative and quantitative manner. Specifically, we notice that the Lyapunov exponent steadily decreases until it stabilizes, pointing to a predictable level of divergence, which aligns with the expectations from chaotic system theory.
+##### Note: Figures 3 & 4 from left to right
+
+The **Lyapunov exponent trace** converges at a similar rate, confirming that our framework captures the dynamics of the system in both a qualitative and quantitative manner. Specifically, we notice that the Lyapunov exponent steadily decreases until it stabilizes, pointing to a predictable level of divergence, which aligns with the expectations from chaotic system theory.
 
 Our Expectation Flow’s convergence is further supported by the fact that the dispersion measure remains finite, confirming the boundedness predicted by our Expectation Flow Limit theorem. This suggests that, despite the inherent chaotic nature of the logistic system, our framework provides an accurate estimate of the long-term geometric evolution of the system.
 
 **Henon Map**
-Next, we applied our framework to the Henon Map, another canonical example of a chaotic dynamical system. The geometric evolution under iterative applications of the Henon Map is shown in **Figure X**. This plot demonstrates that, after an initial phase of rapid change, the system stabilizes, with the Expectation Flow converging to a constant value. This result mirrors the observations made with the Logistic Map.
+Next, we applied our framework to the Henon Map, another canonical example of a chaotic dynamical system. The geometric evolution under iterative applications of the Henon Map is shown in **Figure 6**. This plot demonstrates that, after an initial phase of rapid change, the system stabilizes, with the Expectation Flow converging to a constant value. This result mirrors the observations made with the Logistic Map.
 
 <img src="https://raw.githubusercontent.com/Koruption/Ergodic-Measure-of-Geometric-Change/refs/heads/main/Plots/Geometric%20Evolution%20w%3A%20Lyapunov%20Exponent%20Henon%20Map.png" alt="My Image" style="width: 100%; height: 400px;">
 <div style="display: flex; align-items: center;">
@@ -301,7 +307,9 @@ Next, we applied our framework to the Henon Map, another canonical example of a 
 <img src="https://raw.githubusercontent.com/Koruption/Ergodic-Measure-of-Geometric-Change/refs/heads/main/Plots/Pointwise%20Difference%20Henon%20Map.png" alt="My Image" style="display: inline-block; vertical-align: middle; width: 50%; height: auto;">
 </div>
 
-One of the most significant aspects of the Henon Map analysis is the direct comparison between the Lyapunov exponent and the Expectation Flow. As shown in **Figure Y**, the Lyapunov exponent reaches its steady-state after a series of iterations, confirming that the system's divergence behavior stabilizes over time. This result has deep implications, as it indicates that the geometric behavior of the system, when averaged over the manifold, follows a predictable and bounded trajectory that mirrors the underlying dynamical system’s stability properties.
+##### Note: Figures 5, 6, & 7 from left to right
+
+One of the most significant aspects of the Henon Map analysis is the direct comparison between the Lyapunov exponent and the Expectation Flow. As shown in **Figure 5**, the Lyapunov exponent reaches its steady-state after a series of iterations, confirming that the system's divergence behavior stabilizes over time. This result has deep implications, as it indicates that the geometric behavior of the system, when averaged over the manifold, follows a predictable and bounded trajectory that mirrors the underlying dynamical system’s stability properties.
 
 Additionally, we observe that the Lyapunov Exponent Convergence is consistent with the expectations from the system's inherent chaotic nature. The exponential divergence of nearby trajectories observed in the Lyapunov exponent is captured by our Expectation Flow method, emphasizing the utility of our framework in chaotic dynamics analysis.
 
@@ -322,11 +330,13 @@ These results also imply that **Expectation Flow** could be used as a diagnostic
 Lastly, these results have significant implications for group theoretic studies and ergodic theory. They suggest that our framework could lead to new insights into the relationship between geometric flows and the group actions that define them. We anticipate that future work will extend this analysis to higher-dimensional systems, multi-phase flow behaviors, and non-linear dynamical systems where chaotic interactions and long-term stability need to be understood and quantified.
 
 #### Comparative Analysis
+
 | **Method**             | **What It Measures**                | **Strengths**                                 | **Limitations**                                         |
 | ---------------------- | ----------------------------------- | --------------------------------------------- | ------------------------------------------------------- |
 | **Ricci Flow**         | Curvature evolution over time       | Good for smooth metric spaces                 | Computationally prohibitive for chaotic transformations |
 | **Lyapunov Exponents** | Local trajectory divergence         | Standard chaos diagnostic                     | Cannot track global stability                           |
 | **Expectation Flow**   | Global stability of transformations | Captures long-term evolution without a metric | Requires a measure-theoretic formulation                |
+
 Traditional metric-based methods such as Ricci Flow are well-suited for tracking curvature evolution in smooth settings but become computationally intractable in highly chaotic or complex transformation sequences. Similarly, Lyapunov exponents are useful for quantifying local trajectory divergence but fail to provide a direct measure of long-term geometric stability. Expectation Flow, by contrast, captures the global evolution of transformation stability without requiring an explicit metric, making it a powerful alternative for analyzing geometric behavior in chaotic and high-dimensional systems.
 
 #### Summary
