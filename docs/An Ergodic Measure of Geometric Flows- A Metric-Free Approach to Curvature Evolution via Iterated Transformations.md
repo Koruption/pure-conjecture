@@ -43,6 +43,7 @@ $$\Omega=\{x_i\}_{i\in M\setminus\omega_{\uparrow}}$$
 
 **2. The Averaged Jacobian Measure** 
 Let $M$ be a compact manifold, and let $T:M\to M^{'}$ be a smooth transformation. The Averaged Jacobian Measure over an open subset $A\subseteq M$ is defined as 
+
 $$\mu(T) = \frac{1}{N} \sum_{i=1}^N \delta_{J_T(x_i)}$$ where $J_T(x_i)$ is the Jacobian **determinant || or norm** at sampled points $x_i\in A$.
 
 **3. Iterate Mapping**
@@ -135,7 +136,7 @@ which measures the relative spread from the initial geometric "state" of the man
 
 **Theorem (Dispersion Measure Boundedness):** Let $T^n=T\circ T^{n-1}$ be an iterated map on a compact manifold $M$, where $T:M\to M^{'}$ is smooth. Let $\mu_{\infty}=\{\mu_i(T^i)\}_{i\in\mathbb{Z}}$ be the sequence of averaged Jacobian measured defined over the sequence of iterates $T^n$. If the dispersion measure $\sigma^2(\mu_n)$ converges, then the transformation sequence $T^n$ is bounded over all iterates, i.e., 
 
-$$\sup_n|\mu_n|\lt\infty$$.
+$$\sup_n|\mu_n|\lt\infty$$
 
 **Proof:** Let $r>n$ be the reference geometric state of $M$. Assume $T^{n}$ is unbounded, then it follows that, $\mathbb{E}\left[\mu_r(T\circ T^{r-1})\right]\to\infty$, since the limit introduces infinite accumulations $\lim_{r\to\infty}(1/(N-r))\sum_r |\mu_r|$ over measures of iterates. 
 
