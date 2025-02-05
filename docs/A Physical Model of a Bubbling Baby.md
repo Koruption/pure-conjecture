@@ -16,8 +16,9 @@ I'll start by laying out some constraints and simplifying assumptions. My goal w
 - I'll constrain the geometry and boundary of the problem within a rectangular region (living room) with a height of (0,b) and a width of (a,0) such that the upper right corner is the point (a, b)
 - The baby can only take small steps, i.e., the baby can't "jump" from one part of the room to the other part in a single time step.
 
-	![](attachment/c3ce5c444221ceac8f346b7b3332a29f.excalidraw)
-	The image above describes the geometry of the problem and the baby and gun direction at different times $t_i$
+	<img src="https://raw.githubusercontent.com/Koruption/pure-conjecture/refs/heads/master/assets/Baby%20With%20A%20Bubble%20Gun.png" alt="My Image" style="width: auto; height: 300px;">
+	
+The image above describes the geometry of the problem and the baby and gun direction at different times $t_i$
 
 ---
 
@@ -32,33 +33,28 @@ Question 3 (Q3): What does the aggregate or macroscopic force profile look like 
 
 Question 4 (Q4): What known physics emerge from this model? 
 
-	Note: For the remaining portions of this journal I'll refer to the baby as "the particle" or "particle" or just "baby" and sometimes use them interchageably, it should be noted that they are the same thing. 
+Note: For the remaining portions of this journal I'll refer to the baby as "the particle" or "particle" or just "baby" and sometimes use them interchageably, it should be noted that they are the same thing. 
 
-**Derivation**
+---
+
+#### Derivation
 My first intuition was to look at what happens at the limiting boundaries of the system, i.e., for large time scales and very small time scales. Considering the latter, I was led to the following conjecture: 
 
-*Conjecture 1* (C1): For large time scales as $t\to\infty$ the distribution of a point being at some position $p_i=(x,y)$ should become uniform and depend solely on the geometry of the boundary and not time (time dependence vanishes), i.e., no position should be any more likely than the other. Thus, the probability $P(p_i)\to 0$ for large time scales.   
+**Conjecture 1** (C1): For large time scales as $t\to\infty$ the distribution of a point being at some position $p_i=(x,y)$ should become uniform and depend solely on the geometry of the boundary and not time (time dependence vanishes), i.e., no position should be any more likely than the other. Thus, the probability $P(p_i)\to 0$ for large time scales.   
 
 This conjecture makes sense intuitively since in order to measure where the particle might be at any sufficiently large timescale would require defining regions in which the particle could be. The regions themselves would have to be sufficiently small to provide an accurate probability measure. Thus, as the time goes to infinity, the regions need to get smaller and smaller, and hence the probability vanishes. 
 
 Okay, while I was now convinced of the conjecture for large time scales, I realized that this couldn't possibly be the case for small time scales. I knew from watching the baby that there was no way the probability of him being across the room in his next step or a nanosecond later was possible, hence those positions should not be as likely as the positions nearest him at that time, thus the distribution can't be uniform for small time scales.
 
-*Conjecture 2 (C2): For small time scales i.e., as $t\to 0$ or more specifically as $dt\to 0$, the distribution describing the point's distribution in space is non-uniform, and rely heavily on time and less on the geometry of the boundary.
+**Conjecture 2 (C2):** For small time scales i.e., as $t\to 0$ or more specifically as $dt\to 0$, the distribution describing the point's distribution in space is non-uniform, and rely heavily on time and less on the geometry of the boundary.
 
-From (C2) I began to think about the problem in very small time windows, and asked “what's the probability of finding the particle near its current position after we move forward by some arbitrarily small amount of time?” Mathematically we would, given that the particle was at position $p_t=(x_t, y_t)$ at time t, what is the probability of it being at some point $p_{\epsilon}=(x_t+\epsilon(x), y_t+\epsilon(y))$ after a very small change in time, where $\epsilon(x)$ and $\epsilon(y)$ are small random displacements. Surely this probability isn't less likely than being across the room, thus I was led to the following probability expression in the short time regime: $$ P(p_{\epsilon} \,\vert\, p_t) \approx 1-\frac{k}{e^{\beta t}}$$
+From (C2) I began to think about the problem in very small time windows, and asked “what's the probability of finding the particle near its current position after we move forward by some arbitrarily small amount of time?” Mathematically we would, given that the particle was at position $p_t=(x_t, y_t)$ at time t, what is the probability of it being at some point $p_{\epsilon}=(x_t+\epsilon(x), y_t+\epsilon(y))$ after a very small change in time, where $\epsilon(x)$ and $\epsilon(y)$ are small random displacements. Surely this probability isn't less likely than being across the room, thus I was led to the following probability expression in the short time regime: $$ P(p_{\epsilon} \,\vert\, p_t) \approx \frac{k}{e^{\beta t}}$$
 which physically means that the probability of finding the particle near $p_t$ decays exponentially with time, which makes sense in the short time regime as the baby's legs are small, and he can't jump across the room. Similarly, the particle can't jump to another point far away, hence if the time window is sufficiently small, this should capture the probability evolution. This should also be true in the case of studying the system with respect to a fixed reference point, in the small time regime.
 
-Now the conditional probability can't be true for both timescale regimes so we need to account for that. These conjectures and observations led me to propose a Gaussian distribution to model the particle's position at any time t as: 
-
-$$
-\rho(x,y,t) = \frac{1}{4\pi\sigma^2(t)}e^{-\frac{(x-x_t)^2+(y-y_t)^2}{4\sigma^2(t)}}
-$$
-with $\mu = 0$ since the particle has no bias on where it should be. This is a good start, but there are still a lot of pieces missing, namely how does the distribution change with time or account for regime changes? The changes should match up with the conjectures (C1 & C2) I made through observations earlier. To do this I spent a considerable amount of time thinking about the expression for variance. Originally I sought an expression which unified both the large and small timescale regimes, providing a way to effectively transition between the two in a single equation, i.e., effectively “turn off” part of the expression at large timescales and “turn on” another at small timescales. However, this proved to be difficult as any expression I constructed had competing time dependent terms which wouldn't work out if I took $t\to\infty$ or $t\to 0$. Ultimately I resorted to defining the variance as a piecewise function of time as: $$
-\sigma^2(t) =\begin{cases} 
+Now the conditional probability can't be true for both timescale regimes so we need to account for that. These conjectures and observations led me to propose a Gaussian distribution to model the particle's position at any time t as: $$\rho(x,y,t) = \frac{1}{4\pi\sigma^2(t)}e^{-\frac{(x-x_t)^2+(y-y_t)^2}{4\sigma^2(t)}} $$ with $\mu = 0$ since the particle has no bias on where it should be. This is a good start, but there are still a lot of pieces missing, namely how does the distribution change with time or account for regime changes? The changes should match up with the conjectures (C1 & C2) I made through observations earlier. To do this I spent a considerable amount of time thinking about the expression for variance. Originally I sought an expression which unified both the large and small timescale regimes, providing a way to effectively transition between the two in a single equation, i.e., effectively “turn off” part of the expression at large timescales and “turn on” another at small timescales. However, this proved to be difficult as any expression I constructed had competing time dependent terms which wouldn't work out if I took $t\to\infty$ or $t\to 0$. Ultimately I resorted to defining the variance as a piecewise function of time as: $$ \sigma^2(t) =\begin{cases} 
       \frac{A}{e^{\beta t}} & t\leq t_c \\
       Be^{\beta t} & t\gt t_c 
-   \end{cases}
-$$
+   \end{cases} $$
 where $t_c$ is the “crossover” timescale separating the small- and large timescale regimes, where $A$,$B$ are constants chosen to ensure smooth continuity at $t=t_c$, and $\beta$ is a tuning parameter which can be matched to experimental results. We now have a way of capturing both regime's dynamics, such that as $t\to t_c^{+}$ from above, the distribution's variance is dominated by the exponential decay, and similarly as $t->t_c^{-}$ the variance spreads rapidly (exponentially) leading to a stationary and uniform-like distribution, i.e., every position is equally likely and the probability of any specific position vanishes. 
 
 At this point I've derived part of the model, namely describing probabilistically the position of the particle over time and in different regimes, but we don't yet have an accurate picture of the gun, without which we have no bubbles! For my force derivation my first insight was recognizing that we can't simply define a static force field over the entire geometry, it just doesn't make sense since the force is largely dependent on the baby and hence the position of the point at some time $t$. So I started thinking about the force "popping up" at random points in space, which aligned with our notion about the dynamics of how our particle spatially behaves. I realized I couldn't just define a force vector without taking the particle's position into account, which subsequently means that we have to account for its probabilistic nature. It wouldn't make sense to say the force itself is probabilistic with its own distribution, because it isn't so far as I can tell, but rather it's entirely deterministic in the sense that once the baby is stationary at some point in space, the force emerges at that point from the gun! This naturally led me to think about the force as a sort of delta function $\delta(r-r_0)$, that collapses the force to the most likely position of the particle at time $t$. In my opinion, this was an elegant and accurate description of the force position at any time, so I moved on to deriving a descriptive expression for the force itself. 
