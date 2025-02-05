@@ -1,11 +1,13 @@
 
-**Motivation** 
+#### Motivation
 Just the other day I found myself watching my baby nephew play with a bubble gun in my wife's parent's living room. He walked back and forth in one direction or another, as he frantically laughed pulling the trigger and spraying bubbles up into the air. I wondered if I might be able to model this experience as a physical system and see what mathematics and physics popped out. 
 
-**Introduction**
+#### Introduction
 I'll start by laying out some constraints and simplifying assumptions. My goal was to develop the model entirely from first principles and not rely on any known physics formulae, other than known mathematical functions. The constraints are as follows: 
 
-	Constraints
+---
+
+**Constraints**
 
 - Bubbles only blow when the baby is stationary, i.e., not while moving
 - I'll ignore the z-coordinate of the gun, i.e., we'll focus on the planar physics in the xy-plane. This makes sense because the height of the baby and subsequently the gun does are negligible in their effect of the physics.
@@ -16,6 +18,8 @@ I'll start by laying out some constraints and simplifying assumptions. My goal w
 
 	![](attachment/c3ce5c444221ceac8f346b7b3332a29f.excalidraw)
 	The image above describes the geometry of the problem and the baby and gun direction at different times $t_i$
+
+---
 
 **Some Guiding Questions**
 Below are some questions I came up with at the outset of the problem as a way of helping orient my model and give me some direction. 
