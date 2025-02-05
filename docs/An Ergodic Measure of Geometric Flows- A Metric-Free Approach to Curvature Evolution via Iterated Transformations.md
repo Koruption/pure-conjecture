@@ -42,7 +42,8 @@ which is the set of points that avoid blowups and singularities. Then the set of
 $$\Omega=\{x_i\}_{i\in M\setminus\omega_{\uparrow}}$$
 
 **2. The Averaged Jacobian Measure** 
-Let $M$ be a compact manifold, and let $T:M\to M^{'}$ be a smooth transformation. The Averaged Jacobian Measure over an open subset $A\subseteq M$ is defined as $$\mu(T) = \frac{1}{N} \sum_{i=1}^N \delta_{J_T(x_i)}$$ where $J_T(x_i)$ is the Jacobian **determinant || or norm** at sampled points $x_i\in A$.
+Let $M$ be a compact manifold, and let $T:M\to M^{'}$ be a smooth transformation. The Averaged Jacobian Measure over an open subset $A\subseteq M$ is defined as 
+$$\mu(T) = \frac{1}{N} \sum_{i=1}^N \delta_{J_T(x_i)}$$ where $J_T(x_i)$ is the Jacobian **determinant || or norm** at sampled points $x_i\in A$.
 
 **3. Iterate Mapping**
 Given a compact manifold $M$ and a continuous map $T:M\to M^{'}$ we define a smooth iterative map as $T^n=T\circ T^{n-1}$ of order $n$. It's helpful to think of this as a sequence of mappings, where any indexed map is $T^k=T\circ T^{k-1}$, where $k\le n$. 
