@@ -15,10 +15,16 @@ A common question in differential geometry is, given a manifold $M$(base manifol
 #### Concept
 ---
 Rather than relying on a metric-based approach, we can establish a smooth global averaged measure for tracking geometric change in a way that is metric independent. The key here is to develop a tool akin to statistical mechanics which let us infer global changes from averaging the evolution of local behavior. Typically, problems in geometry are structured in such as way that all the relevant information is encoded in the metrics themselves, however with careful reframing, similar information can be retrieved from mappings, providing a new means of analysis. Recall that under a transformation $T: M \to N$, the *Jacobian* of $T$ is the differential *pushforward* of T, denoted as
+
 $$
 dT_p:T_pM\to T_{T(p)}N
 $$
-which we identify as a transformation taking tangent vectors at points in $M$, to tangent vectors at $T(p)$ in N. In local coordinates we define the Jacobian as $$ J_i^a = \frac{\partial T^a}{\partial x^i}$$. Now in a purely abstract setting, we might not be so concerned with these derivates, but more so in how the volume elements transform with it, which tells us something about the transformation $T$ i.e., namely whether it's an isometry, conformal, or neither. However, if our goal is to get an average sense of how the global geometry changes under the mapping, we can consider how the tangent spaces are changing under it, evaluated at sampled points on the manifold, build up a global picture, and ask “what happens over time?” 
+
+which we identify as a transformation taking tangent vectors at points in $M$, to tangent vectors at $T(p)$ in N. In local coordinates we define the Jacobian as 
+
+$$ J_i^a = \frac{\partial T^a}{\partial x^i}$$. 
+
+Now in a purely abstract setting, we might not be so concerned with these derivates, but more so in how the volume elements transform with it, which tells us something about the transformation $T$ i.e., namely whether it's an isometry, conformal, or neither. However, if our goal is to get an average sense of how the global geometry changes under the mapping, we can consider how the tangent spaces are changing under it, evaluated at sampled points on the manifold, build up a global picture, and ask “what happens over time?” 
 
 As expected, simply averaging over our geometry gives us limited information without a proper reference to contrast with and a notion of convergence and boundedness. If we consider an unchanged manifold as being in a sort of initial “geometric state”, then we can view a mapping as a state evolution of the manifold, and if we apply iterative mappings, our averaging takes on a slightly different role, namely as an averaging of changes over evolutions of the geometric states. In this sense, any convergence or boundedness in the average sense is directly tied to the stabilization of geometric state. Thus, we'll need a way of defining a metric-free averaging measure and ensure that it is bounded when the averages are finite. Since mappings can induce singularities, we'll also need to address them in a way that ensures the measure is controlled.  
 
@@ -27,9 +33,20 @@ As expected, simply averaging over our geometry gives us limited information wit
 Below are a list of definitions which will be used throughout the remainder of the paper. For relevance, the definitions specific to individual proofs are omitted here and will be provided alongside the proofs they are required in. 
 
 **1. Singularity Set:**
-For a compact manifold $M$ and some mapping $T:M\to M^{'}$ we define the singularity set as $$\omega_{\uparrow}=\{x\in M \,\,\vert\,\,T(x)\notin M\,\,\text{or}\,\,\ ||\nabla T(x)||\to\infty\}$$which is the set of points that avoid blowups and singularities. Then the set of open set points of $M$ on which $T$ is well-behaved is the restricted open set $$\Omega=\{x_i\}_{i\in M\setminus\omega_{\uparrow}}$$
+For a compact manifold $M$ and some mapping $T:M\to M^{'}$ we define the singularity set as 
+
+$$\omega_{\uparrow}=\{x\in M \,\,\vert\,\,T(x)\notin M\,\,\text{or}\,\,\ ||\nabla T(x)||\to\infty\}$$
+
+which is the set of points that avoid blowups and singularities. Then the set of open set points of $M$ on which $T$ is well-behaved is the restricted open set 
+
+$$\Omega=\{x_i\}_{i\in M\setminus\omega_{\uparrow}}$$
+
 **2. The Averaged Jacobian Measure** 
-Let $M$ be a compact manifold, and let $T:M\to M^{'}$ be a smooth transformation. The Averaged Jacobian Measure over an open subset $A\subseteq M$ is defined as $$\mu(T) = \frac{1}{N} \sum_{i=1}^N \delta_{J_T(x_i)}$$where $J_T(x_i)$ is the Jacobian **determinant || or norm** at sampled points $x_i\in A$.
+Let $M$ be a compact manifold, and let $T:M\to M^{'}$ be a smooth transformation. The Averaged Jacobian Measure over an open subset $A\subseteq M$ is defined as 
+
+$$\mu(T) = \frac{1}{N} \sum_{i=1}^N \delta_{J_T(x_i)}$$
+
+where $J_T(x_i)$ is the Jacobian **determinant || or norm** at sampled points $x_i\in A$.
 
 **3. Iterate Mapping**
 Given a compact manifold $M$ and a continuous map $T:M\to M^{'}$ we define a smooth iterative map as $T^n=T\circ T^{n-1}$ of order $n$. It's helpful to think of this as a sequence of mappings, where any indexed map is $T^k=T\circ T^{k-1}$, where $k\le n$. 
@@ -50,8 +67,20 @@ Let $T:M\to M^{'}$ be a smooth homeomorphic transformation on a compact manifold
 
 Then, the expectation flow satisfies: $\lim_{n\to\infty} \mathbb{E}\left[\mu_n\right]=\mathbb{E}\left(\lim_{n\to\infty}\mu_n\right)$.
 
-**Proof**: Define the set of sampled points as elements from the subset of the restricted singularity exclusion, i.e., $A\subset\Omega$ where $\Omega=\{x_i\}_{i\in M\setminus\omega_{\uparrow}}$. Since $M$ is compact, $\mu$ can be constructed on a partition of unity of $M$ and hence, it has a finite measure. Thus, the measure must be bounded above by the total variation on $M$ such that: $$|\mu(A)|\leq ||\mu||$$By compactness and existence of the partition of unity, there must exist an integrable function $g$ such that our measure is locally bounded on $M$. Since $M$ is compact, any function $g$ defined as a weighted sum over partitioned subsets of $M$ remains integrable in $\text{L}^1(M)$, ensuring that the total measure remains finite: $$|\mu(x)|\leq g(x)\,\, , \,\,\forall x\in A\,, \forall i$$**Lemma 1**
-Let $T$ be a continuous map $T:M\to M^{'}$ and $\mu(T)$ our averaging measure on an open set of points $A\subseteq\Omega$. Then it follows that the measure of the map is bounded by an integrable function: $$|\mu(T(x_i))|\leq g^{'}(T(x_i))$$for $T(x_i)\in T(A)$ and $x_i\in A$. 
+**Proof**: Define the set of sampled points as elements from the subset of the restricted singularity exclusion, i.e., $A\subset\Omega$ where $\Omega=\{x_i\}_{i\in M\setminus\omega_{\uparrow}}$. Since $M$ is compact, $\mu$ can be constructed on a partition of unity of $M$ and hence, it has a finite measure. Thus, the measure must be bounded above by the total variation on $M$ such that: 
+
+$$|\mu(A)|\leq ||\mu||$$
+
+By compactness and existence of the partition of unity, there must exist an integrable function $g$ such that our measure is locally bounded on $M$. Since $M$ is compact, any function $g$ defined as a weighted sum over partitioned subsets of $M$ remains integrable in $\text{L}^1(M)$, ensuring that the total measure remains finite: 
+
+$$|\mu(x)|\leq g(x)\,\, , \,\,\forall x\in A\,, \forall i$$
+
+**Lemma 1**
+Let $T$ be a continuous map $T:M\to M^{'}$ and $\mu(T)$ our averaging measure on an open set of points $A\subseteq\Omega$. Then it follows that the measure of the map is bounded by an integrable function: 
+
+$$|\mu(T(x_i))|\leq g^{'}(T(x_i))$$
+
+for $T(x_i)\in T(A)$ and $x_i\in A$. 
 
 **Lemma 2**
 Let $T^n$ be an iterated map defined as $T^n=T\circ T^{n-1}(x_i)$ for $n\in \mathbb{Z}$ and $x_i\in A$, we can define a sequence of averages as the sequence of finite measures $\{\mu(T^n)\}$. Then the finite sum of measures 
@@ -60,9 +89,26 @@ $$\sum_i|\mu_i(T^i)|\leq \sum_i g_i(T^i)\leq\sum_i||\mu_i||$$
 
 is bounded with finite measure. The compactness of $M$ and partition of unity guarantees this remains bounded when $A$ covers $M$, i.e., $A=\Omega$. Since $\mu$ is a locally finite on $A\subset\Omega$ and certainly on $\Omega$, it follows that $\mu$ is $\sigma-$finite on $\Omega$. By construction, the dominating function $g_i$ is integrable over $M$.
 
-This allows us to extend our finite definition to infinite sums: $$\mu_{\infty}=\sum_{i=0}^{\infty}|\mu_i(T^i)|$$We can define the finite average over our finite measures $\mu_i$ as $$\mathbb{E}\left[\mu_{N}\right]=\frac{1}{i+1}\sum_{i=0}^{N}|\mu_i(T^i)|$$where we denote the measure of the $n^{th}$ measure $\mu_n(T^n)$ as $\mu_N$. Now taking the limit and applying DCT we have: $$\lim_{n\to\infty}\mathbb{E}\left[\mu_n\right]=\mathbb{E}\left(\lim_{n\to\infty}\sum_{n=0}^{\infty}|\mu_n(T^n)|\right)$$Thus, we conclude that the limit of the Expectation commutes: $$\lim_{n\to\infty} \mathbb{E}[\mu(T^n)] = \mathbb{E}\left(\lim_{n\to\infty}\mu_n\right)$$These result holds significant implications for the long-term behavior of geometric flows, as it guarantees the convergence of the expectation of the measure under repeated transformations, assuming the sequence of measures converges. This foundational result ensures that, under appropriate conditions, the average geometric behavior stabilizes and that the Expectation Flow does not diverge, even in the presence of potentially chaotic transformation sequences. 
+This allows us to extend our finite definition to infinite sums: 
 
-These equations share a similar form to those used to study dynamical systems where one often studies the trajectories of the system in phase space, tracking deformations over time. This suggests some analog to the study of stability in dynamical systems, but in a more generalized and global way which applies to manifolds. While the methods of dynamical systems are typically concerned with trajectories and qualitative vs. quantitative measure, this method provides a way to achieve both and do so in a local and global setting. 
+$$\mu_{\infty}=\sum_{i=0}^{\infty}|\mu_i(T^i)|$$
+
+We can define the finite average over our finite measures $\mu_i$ as 
+
+$$\mathbb{E}\left[\mu_{N}\right]=\frac{1}{i+1}\sum_{i=0}^{N}|\mu_i(T^i)|$$
+
+where we denote the measure of the $n^{th}$ measure $\mu_n(T^n)$ as $\mu_N$. Now taking the limit and applying DCT we have: 
+
+$$\lim_{n\to\infty}\mathbb{E}\left[\mu_n\right]=\mathbb{E}\left(\lim_{n\to\infty}\sum_{n=0}^{\infty}|\mu_n(T^n)|\right)$$
+
+Thus, we conclude that the limit of the Expectation commutes: 
+
+$$\lim_{n\to\infty} \mathbb{E}[\mu(T^n)] = \mathbb{E}\left(\lim_{n\to\infty}\mu_n\right)$$
+
+These result holds significant implications for the long-term behavior of geometric flows, as it guarantees the convergence of the expectation of the measure under repeated transformations, assuming the sequence of measures converges. This foundational result ensures that, under appropriate conditions, the average geometric behavior stabilizes and that the Expectation Flow does not diverge, even in the presence of potentially chaotic transformation sequences. 
+
+These equations themselves share a similar form to those used to study dynamical systems where one often follows the trajectories of the system in phase space, tracking deformations over time. This suggests some analog to the study of stability in dynamical systems, but in a more generalized and global way which applies to manifolds. While the methods of dynamical systems are typically concerned with trajectories and qualitative vs. quantitative measure, this method provides a way to achieve both and do so in a local and global setting. 
+
 #### Geometric Horizons and Convergence
 ---
 We can now ask what happens to the expectation of our averages under successive iterates. If the measure sequence $\mu_{n}$ diverges, is our expectation flow guaranteed to diverge or might it somehow remain finite by selectively averaging. Certainly, if an iterative mapping introduces more singularities than stable points for large histories, then the measures sequence $\mu_{n}$ would necessarily diverge. However, the singularity set guarantees the measure sequences won't blow up. If we remove the restrictions and let $\Omega$ act as a cover on $M$, our flow as is our averaging measures are free to diverge. 
@@ -74,22 +120,56 @@ Now when $\mu_{n}\to 0$ and averaging measures vanish, implying that the Jacobia
 #### Definitions
 ---
 **3.Dispersion Metric**
-Given a compact manifold $M$, a smooth sequence of continuous mappings $T^n=T\circ T^{n-1}$ where $T:M\to M^{'}$, and a sequence of averaged Jacobian measures $\mu_n$, we define the mean-free dispersion metric as: $$d_{\mathcal{F}}(\mu_i,\mu_j)=|\mathbb{E}[\mu_j^2]-(\mathbb{E}[\mu_i]^2)|$$which measures the variance between any two measures in the sequence. This allows us to understand how the $\mu_n$ measure sequence behaves in terms of its spread or convergence.
+Given a compact manifold $M$, a smooth sequence of continuous mappings $T^n=T\circ T^{n-1}$ where $T:M\to M^{'}$, and a sequence of averaged Jacobian measures $\mu_n$, we define the mean-free dispersion metric as: 
+
+$$d_{\mathcal{F}}(\mu_i,\mu_j)=|\mathbb{E}[\mu_j^2]-(\mathbb{E}[\mu_i]^2)|$$
+
+which measures the variance between any two measures in the sequence. This allows us to understand how the $\mu_n$ measure sequence behaves in terms of its spread or convergence.
 
 **4. Dispersion Measure**
-Given a compact manifold $M$, a smooth sequence of continuous mappings $T^n=T\circ T^{n-1}$ where $T:M\to M^{'}$, and a sequence of averaged Jacobian measures $\mu_n$, with a metric $d_{\mathcal{F}}(\mu_i,\mu_j)$. The dispersion measure $\sigma^2(\mu_n)$ quantifies the overall spread of the sequence of Jacobian measures, $\mu_n$, and is defined as:$$\sigma^2(\mu_r)=\frac{1}{N}\sum_i^N d_{\mathcal{F}}(\mu_r,\mu_i)^2$$
+Given a compact manifold $M$, a smooth sequence of continuous mappings $T^n=T\circ T^{n-1}$ where $T:M\to M^{'}$, and a sequence of averaged Jacobian measures $\mu_n$, with a metric $d_{\mathcal{F}}(\mu_i,\mu_j)$. The dispersion measure $\sigma^2(\mu_n)$ quantifies the overall spread of the sequence of Jacobian measures, $\mu_n$, and is defined as:
+
+$$\sigma^2(\mu_r)=\frac{1}{N}\sum_i^N d_{\mathcal{F}}(\mu_r,\mu_i)^2$$
+
+
 which measures the relative spread from the initial geometric "state" of the manifold. 
 
 ---
 
-**Theorem (Dispersion Measure Boundedness):** Let $T^n=T\circ T^{n-1}$ be an iterated map on a compact manifold $M$, where $T:M\to M^{'}$ is smooth. Let $\mu_{\infty}=\{\mu_i(T^i)\}_{i\in\mathbb{Z}}$ be the sequence of averaged Jacobian measured defined over the sequence of iterates $T^n$. If the dispersion measure $\sigma^2(\mu_n)$ converges, then the transformation sequence $T^n$ is bounded over all iterates, i.e., $$\sup_n|\mu_n|\lt\infty$$.
+**Theorem (Dispersion Measure Boundedness):** Let $T^n=T\circ T^{n-1}$ be an iterated map on a compact manifold $M$, where $T:M\to M^{'}$ is smooth. Let $\mu_{\infty}=\{\mu_i(T^i)\}_{i\in\mathbb{Z}}$ be the sequence of averaged Jacobian measured defined over the sequence of iterates $T^n$. If the dispersion measure $\sigma^2(\mu_n)$ converges, then the transformation sequence $T^n$ is bounded over all iterates, i.e., 
+
+$$\sup_n|\mu_n|\lt\infty$$.
 
 **Proof:** Let $r>n$ be the reference geometric state of $M$. Assume $T^{n}$ is unbounded, then it follows that, $\mathbb{E}\left[\mu_r(T\circ T^{r-1})\right]\to\infty$, since the limit introduces infinite accumulations $\lim_{r\to\infty}(1/(N-r))\sum_r |\mu_r|$ over measures of iterates. 
 
-**Lemma 1:** If $T^{k}$ is unbounded at after kth iterate on a collection of open sets $A\subseteq M$, then $$\sup_{x\in M}||J_{T^{k}}(x)||=\mu_k(T^k)\to\infty,\,\,\forall k\gt k-1$$for $x\in A$. Then the expectation $\mathbb{E}[\mu_{\infty}]$ cannot be finite.
+**Lemma 1:** If $T^{k}$ is unbounded at after kth iterate on a collection of open sets $A\subseteq M$, then 
 
-**Lemma 1 Proof:** Since $\mu_{\infty}$ summation is defined as $$\mu_{\infty}=\sum_{i=0}^{\infty}|\mu_i(T^i)|$$and noting that $\mu_i$'s are defined by the averaged Jacobians,
-we partition the sum for large $N$ for terms up to $k-1$ and onward by $u_{k-1}$ and $u_{N-k}$, to get $$\mu_{\infty}=\mu_{k-1}+\mu_{N-K}$$and since $T^k$ is unbounded after the kth iterate, i.e., $\mu_k(T^k)\to\infty$, we conclude that if $T^k$ is unbounded, then the expectation over the entire sequence of measures is unbounded. $$\mathbb{E}\left(\lim_{n\to\infty}\mu_n\right)\to\infty$$**Continued Proof:** Applying our metric $d_{\mathcal{F}}(\mu_n,\mu_{r})$, we write the dispersion measure $\sigma^2(\mu_n)$ as $$\sigma^2(\mu_n)=\frac{1}{N}\sum_{r>n}^N d_{\mathcal{F}}(\mu_n,\mu_r)^2$$Since $T^r$ is unbounded in the $r^{th}$ iteration, we have $$d_{\mathcal{F}}(\mu_n,\mu_r)=\left| \mathbb{E}\left[\mu_r^2\right]-\mathbb{E}\left[\mu_n\right]^2\right|$$
+$$\sup_{x\in M}||J_{T^{k}}(x)||=\mu_k(T^k)\to\infty,\,\,\forall k\gt k-1$$
+
+for $x\in A$. Then the expectation $\mathbb{E}[\mu_{\infty}]$ cannot be finite.
+
+**Lemma 1 Proof:** Since $\mu_{\infty}$ summation is defined as 
+
+$$\mu_{\infty}=\sum_{i=0}^{\infty}|\mu_i(T^i)|$$
+
+and noting that $\mu_i$'s are defined by the averaged Jacobians,
+
+we partition the sum for large $N$ for terms up to $k-1$ and onward by $u_{k-1}$ and $u_{N-k}$, to get 
+
+$$\mu_{\infty}=\mu_{k-1}+\mu_{N-K}$$
+
+and since $T^k$ is unbounded after the kth iterate, i.e., $\mu_k(T^k)\to\infty$, we conclude that if $T^k$ is unbounded, then the expectation over the entire sequence of measures is unbounded. 
+
+$$\mathbb{E}\left(\lim_{n\to\infty}\mu_n\right)\to\infty$$
+
+**Continued Proof:** Applying our metric $d_{\mathcal{F}}(\mu_n,\mu_{r})$, we write the dispersion measure $\sigma^2(\mu_n)$ as 
+
+$$\sigma^2(\mu_n)=\frac{1}{N}\sum_{r>n}^N d_{\mathcal{F}}(\mu_n,\mu_r)^2$$
+
+Since $T^r$ is unbounded in the $r^{th}$ iteration, we have 
+
+$$d_{\mathcal{F}}(\mu_n,\mu_r)=\left| \mathbb{E}\left[\mu_r^2\right]-\mathbb{E}\left[\mu_n\right]^2\right|$$
+
 with $\mathbb{E}\left[\mu_r^2\right]\to\infty$ we conclude that $\sigma^2(\mu_N)$ must diverge as $n\to\infty$ by definition and expectation growth in $r$. Thus, if the dispersion measure $\sigma^2(\mu_n)$ converges, then $T^n$ is bounded. 
 
 #### Classifying Maps
@@ -98,7 +178,11 @@ Naturally we might ask what types of maps lead to constant or vanishing expectat
 
 #### Definitions
 ---
-**Rope:** Given a compact manifold $M$, a smooth sequence of continuous mappings $T^n=T\circ T^{n-1}$ where $T:M\to M^{'}$, and a sequence of averaged Jacobian measures $\mu_n$, we define a function $\psi(x)$ as $$\psi(x)=\int_{\Omega}w_i\rho_i(x) \,d\mu$$where $w_i$ are weights defined by the averages of the Jacobians under a iterate $T^i$ evaluated at the points on the open set $\Omega\subseteq M$ and $\rho(x)$ is a smooth polynomial interpolating function. 
+**Rope:** Given a compact manifold $M$, a smooth sequence of continuous mappings $T^n=T\circ T^{n-1}$ where $T:M\to M^{'}$, and a sequence of averaged Jacobian measures $\mu_n$, we define a function $\psi(x)$ as 
+
+$$\psi(x)=\int_{\Omega}w_i\rho_i(x) \,d\mu$$
+
+where $w_i$ are weights defined by the averages of the Jacobians under a iterate $T^i$ evaluated at the points on the open set $\Omega\subseteq M$ and $\rho(x)$ is a smooth polynomial interpolating function. 
 
 ---
 
@@ -111,7 +195,23 @@ By leveraging the measure-theoretic framework developed in this paper, the Rope 
 ---
 #### An Ergodic Action
 
-We have discussed histories informally up until this point, I'll now formally define it as the action over iterates $$\mathcal{S_F}=\frac{1}{\mu_{\infty}}\int_\Omega \psi_id\mu$$where the $\frac{1}{\mu_{\infty}}$ is a "weighting over histories" and where $\psi_{i}d\mu_{i}$ is the Rope under the $T^i$ iterate with averaging measure $\mu_{i}$. We construct the Lagrangian as $$\mathcal{L}(\mu_i,\psi_i,\rho_i,x_i)=\int_\Omega \log(\lambda_i) w_i\rho_i(x)d\mu_i$$where $\lambda_i=\text{Rank}(J_{T_i}(x))$. Using the variational principle, we can derive the following Rope Equation: $$\frac{\delta\mathcal{S_F}}{\delta\psi_i}-\int_\Omega\frac{\delta \mathcal{L}}{\delta\psi_i}d\mu_i=0$$which can be rewritten with substitutions as $$\frac{1}{\mu_{\infty}+\epsilon}=\int_\Omega\log(\lambda_i)w_i\rho_i(x)d\mu_i$$note that we have introduced an arbitrarily small $\epsilon$ to handle convergence to 0 in $\mu_{\infty}$. It's clear that if the measure sequence diverges our ropes will necessarily vanish, thus non-zero variations of the actions preserve ropes i.e., they remain positive. 
+We have discussed histories informally up until this point, I'll now formally define it as the action over iterates 
+
+$$\mathcal{S_F}=\frac{1}{\mu_{\infty}}\int_\Omega \psi_id\mu$$
+
+where the $\frac{1}{\mu_{\infty}}$ is a "weighting over histories" and where $\psi_{i}d\mu_{i}$ is the Rope under the $T^i$ iterate with averaging measure $\mu_{i}$. We construct the Lagrangian as 
+
+$$\mathcal{L}(\mu_i,\psi_i,\rho_i,x_i)=\int_\Omega \log(\lambda_i) w_i\rho_i(x)d\mu_i$$
+
+where $\lambda_i=\text{Rank}(J_{T_i}(x))$. Using the variational principle, we can derive the following Rope Equation: 
+
+$$\frac{\delta\mathcal{S_F}}{\delta\psi_i}-\int_\Omega\frac{\delta \mathcal{L}}{\delta\psi_i}d\mu_i=0$$
+
+which can be rewritten with substitutions as 
+
+$$\frac{1}{\mu_{\infty}+\epsilon}=\int_\Omega\log(\lambda_i)w_i\rho_i(x)d\mu_i$$
+
+note that we have introduced an arbitrarily small $\epsilon$ to handle convergence to 0 in $\mu_{\infty}$. It's clear that if the measure sequence diverges our ropes will necessarily vanish, thus non-zero variations of the actions preserve ropes i.e., they remain positive. 
 
 **Corollary 1 (Rope Classification Theorem):** Given a compact manifold $M$, a smooth sequence of continuous mappings $T^n=T\circ T^{n-1}$ where $T:M\to M^{'}$, and a sequence of averaged Jacobian measures $\mu_n$. $T$ is Rope Preserving if and only if $\delta \mathcal{S_F}\gt 0$.
 
@@ -139,8 +239,14 @@ The numerical results demonstrate the power and robustness of our framework when
 
 To validate the theoretical framework, we implemented numerical experiments using 3 different two-dimensional transformation:
 - $T(\theta,\phi)=\left[\theta+\epsilon \sin(\phi), \phi+\delta\sin(\theta)\right]$ where $\epsilon = 1500$ and $\delta = 820$ serve as deformation parameters. We'll call this Example 1. 
-- Logistic Map with Convex Coupling: $$\begin{align}x_{n+1}=(1-\epsilon)r\,x_n(1-x_n)+\epsilon \,r\,y_n(1-y_n) \\ y_{n+1}=\epsilon\,r\,x_n(1-x_n)+(1-\epsilon)r\,y_n(1-y_n)\end{align}$$
-- Henon Map: $$\begin{gather}x_{n+1}=1-ax^2_n+by_n \\ y_{n+1}=cx_n\end{gather}$$
+- Logistic Map with Convex Coupling: 
+
+$$\begin{align}x_{n+1}=(1-\epsilon)r\,x_n(1-x_n)+\epsilon \,r\,y_n(1-y_n) \\ y_{n+1}=\epsilon\,r\,x_n(1-x_n)+(1-\epsilon)r\,y_n(1-y_n)\end{align}$$
+
+- Henon Map: 
+
+$$\begin{gather}x_{n+1}=1-ax^2_n+by_n \\ y_{n+1}=cx_n\end{gather}$$
+
 These transformations were chosen to showcase handling of non-trivial geometric evolutions which might traditionally be challenging in a geometric setting. In addition, the Logistic and Henon maps were chosen to study how the Expectation Flow predicts and captures long-term boundedness in chaotic systems from a purely geometric perspective. 
 
 The framework was implemented using a sampling-based approach to compute averaged Jacobian measures. The algorithm:
