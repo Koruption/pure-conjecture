@@ -13,7 +13,6 @@ In a computational environment, we'd hope for some sort of stopping condition, a
 #### Definitions
 ---
 **Branch Length**: The length of the $i^{\text{th}}$ branch for the $j^{\text{th}}$ phase/depth $\ell_{i,j}$is defined recursively as: 
-
 $$\ell_{i,j}=\ell_{i-1,j}-\left(\ell_{i-1,j}\right)^{\frac{1}{n}}\cdot\eta^{\frac{1}{2}}$$
 
 where $\eta\sim\mathcal{N}(\mu,\sigma)$ and where $\mu=\ell_{i-1,j}$ and $\sigma=k/j$ where $k-$is a spread speed factor determining how quickly the branch's variability in length collapses to a specific value and $j-$is the current depth or phase of the tree. Lastly, note that $n-$is a decay factor which physically might encode something like available sunlight, weather conditions, etc., i.e., it might be expressible in those variables, for now we can just as well assume $n=1$ or some other value for that matter.  
