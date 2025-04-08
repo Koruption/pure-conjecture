@@ -1,0 +1,591 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://Koruption.github.io/pure-conjecture/A%20Physical%20Model%20of%20a%20Bubbling%20Baby/">
+      
+      
+        <link rel="prev" href="../A%20Cheap%20Steady-State%20Approximation%20to%20Volterra%20Equations/">
+      
+      
+        <link rel="next" href="../An%20Ergodic%20Measure%20of%20Geometric%20Flows-%20A%20Metric-Free%20Approach%20to%20Curvature%20Evolution%20via%20Iterated%20Transformations/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>A Physical Model of a Bubbling Baby - Pure Conjecture</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#motivation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Pure Conjecture" class="md-header__button md-logo" aria-label="Pure Conjecture" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Pure Conjecture
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              A Physical Model of a Bubbling Baby
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Koruption/pure-conjecture" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Pure Conjecture" class="md-nav__button md-logo" aria-label="Pure Conjecture" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Pure Conjecture
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Koruption/pure-conjecture" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pure Conjecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A%20Cheap%20Steady-State%20Approximation%20to%20Volterra%20Equations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    A Cheap Steady State Approximation to Volterra Equations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    A Physical Model of a Bubbling Baby
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    A Physical Model of a Bubbling Baby
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#motivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motivation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#derivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Derivation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../An%20Ergodic%20Measure%20of%20Geometric%20Flows-%20A%20Metric-Free%20Approach%20to%20Curvature%20Evolution%20via%20Iterated%20Transformations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    An Ergodic Measure of Geometric Flows  A Metric Free Approach to Curvature Evolution via Iterated Transformations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Random%20Leaves%20-%20An%20Effective%20Model%20of%20Stochastic%20Trees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Random Leaves   An Effective Model of Stochastic Trees
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#motivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motivation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#derivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Derivation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>A Physical Model of a Bubbling Baby</h1>
+
+<h4 id="motivation">Motivation</h4>
+<p>Just the other day I found myself watching my baby nephew play with a bubble gun in my wife's parent's living room. He walked back and forth in one direction or another, as he frantically laughed pulling the trigger and spraying bubbles up into the air. I wondered if I might be able to model this experience as a physical system and see what mathematics and physics popped out. </p>
+<h4 id="introduction">Introduction</h4>
+<p>I'll start by laying out some constraints and simplifying assumptions. My goal was to develop the model entirely from first principles and not rely on any known physics formulae, other than known mathematical functions. The constraints are as follows: </p>
+<hr />
+<p><strong>Constraints</strong></p>
+<ul>
+<li>Bubbles only blow when the baby is stationary, i.e., not while moving</li>
+<li>I'll ignore the z-coordinate of the gun, i.e., we'll focus on the planar physics in the xy-plane. This makes sense because the height of the baby and subsequently the gun does are negligible in their effect of the physics.</li>
+<li>I'll assume the baby's walk is random and prefer no direction or region of space </li>
+<li>I'll consider the baby as a point moving through space in the xy-plane and assign it a force vector representing the force from the gun. </li>
+<li>I'll constrain the geometry and boundary of the problem within a rectangular region (living room) with a height of (0,b) and a width of (a,0) such that the upper right corner is the point (a, b)</li>
+<li>
+<p>The baby can only take small steps, i.e., the baby can't "jump" from one part of the room to the other part in a single time step.</p>
+<p><img src="https://raw.githubusercontent.com/Koruption/pure-conjecture/refs/heads/master/assets/Baby%20With%20A%20Bubble%20Gun.png" alt="My Image" style="width: auto; height: 300px;"></p>
+</li>
+</ul>
+<p>The image above describes the geometry of the problem and the baby and gun direction at different times <span class="arithmatex">\(t_i\)</span></p>
+<hr />
+<p><strong>Some Guiding Questions</strong>
+Below are some questions I came up with at the outset of the problem as a way of helping orient my model and give me some direction. </p>
+<p>Question 1 (Q1): What is the probability of finding the particle at some point <span class="arithmatex">\(p=(x,y)\)</span>?</p>
+<p>Question 2 (Q2): What does the distribution of bubbles look like for large time scales? </p>
+<p>Question 3 (Q3): What does the aggregate or macroscopic force profile look like for large time scales vs. small time scales? </p>
+<p>Question 4 (Q4): What known physics emerge from this model? </p>
+<p>Note: For the remaining portions of this journal I'll refer to the baby as "the particle" or "particle" or just "baby" and sometimes use them interchageably, it should be noted that they are the same thing. </p>
+<hr />
+<h4 id="derivation">Derivation</h4>
+<p>My first intuition was to look at what happens at the limiting boundaries of the system, i.e., for large time scales and very small time scales. Considering the latter, I was led to the following conjecture: </p>
+<p><strong>Conjecture 1</strong> (C1): For large time scales as <span class="arithmatex">\(t\to\infty\)</span> the distribution of a point being at some position <span class="arithmatex">\(p_i=(x,y)\)</span> should become uniform and depend solely on the geometry of the boundary and not time (time dependence vanishes), i.e., no position should be any more likely than the other. Thus, the probability <span class="arithmatex">\(P(p_i)\to 0\)</span> for large time scales.   </p>
+<p>This conjecture makes sense intuitively since in order to measure where the particle might be at any sufficiently large timescale would require defining regions in which the particle could be. The regions themselves would have to be sufficiently small to provide an accurate probability measure. Thus, as the time goes to infinity, the regions need to get smaller and smaller, and hence the probability vanishes. </p>
+<p>Okay, while I was now convinced of the conjecture for large time scales, I realized that this couldn't possibly be the case for small time scales. I knew from watching the baby that there was no way the probability of him being across the room in his next step or a nanosecond later was possible, hence those positions should not be as likely as the positions nearest him at that time, thus the distribution can't be uniform for small time scales.</p>
+<p><strong>Conjecture 2 (C2):</strong> For small time scales i.e., as <span class="arithmatex">\(t\to 0\)</span> or more specifically as <span class="arithmatex">\(dt\to 0\)</span>, the distribution describing the point's distribution in space is non-uniform, and rely heavily on time and less on the geometry of the boundary.</p>
+<p>From (C2) I began to think about the problem in very small time windows, and asked “what's the probability of finding the particle near its current position after we move forward by some arbitrarily small amount of time?” Mathematically we would, given that the particle was at position <span class="arithmatex">\(p_t=(x_t, y_t)\)</span> at time t, what is the probability of it being at some point <span class="arithmatex">\(p_{\epsilon}=(x_t+\epsilon(x), y_t+\epsilon(y))\)</span> after a very small change in time, where <span class="arithmatex">\(\epsilon(x)\)</span> and <span class="arithmatex">\(\epsilon(y)\)</span> are small random displacements. Surely this probability isn't less likely than being across the room, thus I was led to the following probability expression in the short time regime: </p>
+<div class="arithmatex">\[ P(p_{\epsilon} \,\vert\, p_t) \approx \frac{k}{e^{\beta t}}\]</div>
+<p>which physically means that the probability of finding the particle near <span class="arithmatex">\(p_t\)</span> decays exponentially with time, which makes sense in the short time regime as the baby's legs are small, and he can't jump across the room. Similarly, the particle can't jump to another point far away, hence if the time window is sufficiently small, this should capture the probability evolution. This should also be true in the case of studying the system with respect to a fixed reference point, in the small time regime.</p>
+<p>Now the conditional probability can't be true for both timescale regimes so we need to account for that. These conjectures and observations led me to propose a Gaussian distribution to model the particle's position at any time t as: </p>
+<div class="arithmatex">\[\rho(x,y,t) = \frac{1}{4\pi\sigma^2(t)}e^{-\frac{(x-x_t)^2+(y-y_t)^2}{4\sigma^2(t)}}\]</div>
+<p>with <span class="arithmatex">\(\mu = 0\)</span> since the particle has no bias on where it should be. This is a good start, but there are still a lot of pieces missing, namely how does the distribution change with time or account for regime changes? The changes should match up with the conjectures (C1 &amp; C2) I made through observations earlier. To do this I spent a considerable amount of time thinking about the expression for variance. Originally I sought an expression which unified both the large and small timescale regimes, providing a way to effectively transition between the two in a single equation, i.e., effectively “turn off” part of the expression at large timescales and “turn on” another at small timescales. However, this proved to be difficult as any expression I constructed had competing time dependent terms which wouldn't work out if I took <span class="arithmatex">\(t\to\infty\)</span> or <span class="arithmatex">\(t\to 0\)</span>. Ultimately I resorted to defining the variance as a piecewise function of time as: </p>
+<div class="arithmatex">\[ \sigma^2(t) =\begin{cases} 
+      \frac{A}{e^{\beta t}} &amp; t\leq t_c \\
+      Be^{\beta t} &amp; t\gt t_c 
+   \end{cases} \]</div>
+<p>where <span class="arithmatex">\(t_c\)</span> is the “crossover” timescale separating the small- and large timescale regimes, where <span class="arithmatex">\(A\)</span>,<span class="arithmatex">\(B\)</span> are constants chosen to ensure smooth continuity at <span class="arithmatex">\(t=t_c\)</span>, and <span class="arithmatex">\(\beta\)</span> is a tuning parameter which can be matched to experimental results. We now have a way of capturing both regime's dynamics, such that as <span class="arithmatex">\(t\to t_c^{+}\)</span> from above, the distribution's variance is dominated by the exponential decay, and similarly as <span class="arithmatex">\(t-&gt;t_c^{-}\)</span> the variance spreads rapidly (exponentially) leading to a stationary and uniform-like distribution, i.e., every position is equally likely and the probability of any specific position vanishes. </p>
+<p>At this point I've derived part of the model, namely describing probabilistically the position of the particle over time and in different regimes, but we don't yet have an accurate picture of the gun, without which we have no bubbles! For my force derivation my first insight was recognizing that we can't simply define a static force field over the entire geometry, it just doesn't make sense since the force is largely dependent on the baby and hence the position of the point at some time <span class="arithmatex">\(t\)</span>. So I started thinking about the force "popping up" at random points in space, which aligned with our notion about the dynamics of how our particle spatially behaves. I realized I couldn't just define a force vector without taking the particle's position into account, which subsequently means that we have to account for its probabilistic nature. It wouldn't make sense to say the force itself is probabilistic with its own distribution, because it isn't so far as I can tell, but rather it's entirely deterministic in the sense that once the baby is stationary at some point in space, the force emerges at that point from the gun! This naturally led me to think about the force as a sort of delta function <span class="arithmatex">\(\delta(r-r_0)\)</span>, that collapses the force to the most likely position of the particle at time <span class="arithmatex">\(t\)</span>. In my opinion, this was an elegant and accurate description of the force position at any time, so I moved on to deriving a descriptive expression for the force itself. </p>
+<p>I imagined that the effect of the force on the bubbles would largely be planar, so that we could ignore any z-component and hence keep consistent with our xy-plane constraints. In 1-Dimension I imagined the force (wind) from the gun decreasing in proportion to the distance from the muzzle, reasoning that the decrease was something like <span class="arithmatex">\(1/r\)</span> where <span class="arithmatex">\(r\)</span> was the distance from the muzzle. This seemed reasonable since the bubble are initially driven forward in the plane by the force of the gun, but its effects decrease with as the bubbles move further away from the muzzle, where ambient forces such as temperature, gravity, etc., dominate. Thus, I defined force as: </p>
+<div class="arithmatex">\[ \textbf{F}(\textbf{r}) = \frac{k}{||\delta^2(\textbf{r} - \textbf{r}_{\sigma} ) - \textbf{r}_i||}\hat{d}\]</div>
+<p>where <span class="arithmatex">\(\textbf{r}_{\sigma}\)</span> is the most probable position of the particle at time <span class="arithmatex">\(t\)</span> in the plane, <span class="arithmatex">\(\hat{d}\)</span> is the direction of the gun, <span class="arithmatex">\(\textbf{r}_i\)</span> some position away from the gun, and <span class="arithmatex">\(k\)</span> some magnitudinal coefficient. From this expression we've defined a force whose effect is 0 everywhere except at the most probable particle position at any time t, which can be interpreted from the delta function's collapsing the force to that point. Now one thing I want to be sure to be sure to discuss is the notion of the direction of the gun <span class="arithmatex">\(\hat{d}\)</span> since it's a subtle, yet important detail. So far we've discussed the probabilistic nature of the particle's position and the nature of the force at that position, but the causal relation of the force's direction has not been. Here I thought, “Does this direction depend on the position of the particle?” Surely not, the particle distribution only tells us where the particle could be and how it might spread in different regimes, but it's just a point, its distribution implies no constraints on the direction of the force, i.e., at most we can say that the force “follows” the point, but it is independent in its orientation at that point. Which direction does the force go at that point, well surely the baby knows, maybe he's got his own reasoning for why he shot in one direction or the other. Perhaps he prefers shooting bubbles at his uncle (I was unfortunate), or his aunt, but these are trivialities and not important to the discussion, so instead we'll assume the baby shoots in uniformly random direction <span class="arithmatex">\(\theta_i\)</span> with the distribution <span class="arithmatex">\(\rho(\theta_{i})=\frac{1}{2\pi}\)</span> so the force at any point is randomly sampled from the unit circle between <span class="arithmatex">\(0\leq\theta_i\leq 2\pi\)</span>. We could complicate the direction distribution's profile by saying <span class="arithmatex">\(\theta_i\)</span>'s are constrained by the particle's distance to the boundary, so that at the right wall the available angles to sample should be defined by the half plane <span class="arithmatex">\(\frac{\pi}{2}\leq\theta_i\leq\frac{3\pi}{2}\)</span> and similarly on the left wall, <span class="arithmatex">\(\frac{3\pi}{2}\leq\theta_i\leq\frac{\pi}{2}\)</span> and the top and bottom wall can be defined in a similar fashion. This is accurate, but adds unnecessary complexity so we'll simply say that the force is 0 at the boundaries, since we lose no interesting physics there, and call it a day. </p>
+<p><strong>Discussion &amp; Implications</strong>
+Putting this all together, we can begin to answer, some, of my initial questions, and conjecture about the rest. While I haven't tried to make any explicit calculations, we can already see how the system behaves without it. </p>
+<p>If we let our timescale <span class="arithmatex">\(t\to t_c^{-}\)</span> our variance shifts to an exponential decay, which means as the system evolves over this small time window, the probability of finding the particle and subsequently its force nearby is more likely than finding it across the room. This aligns with my conjecture (C2) and gives us a way of studying the dynamics in a more deterministic way. Over a sufficiently small window <span class="arithmatex">\(t_i+\epsilon(t)\)</span> for a particle at position <span class="arithmatex">\(p=(x_t,y_t)=\textbf{r}_\sigma\)</span> we can expect there to be a force concentration. We can sum up the force contribution over this window to get the net force: </p>
+<div class="arithmatex">\[F_{\text{net}}=\int_{t_i+\epsilon(t)} \textbf{F}(\textbf{r})\,dr = \int_{t_i+\epsilon(t)} \frac{k}{||\delta(\textbf{r}-\langle x_t,y_t \rangle) - \textbf{r}_i||}\hat{d}_i\]</div>
+<p>since we shouldn't expect the bubbles to wander too far (in the plane) from the muzzle of the gun in this window, i.e., <span class="arithmatex">\(\textbf{r}_i \sim 0\)</span>, these forces reduce to their magnitude and directional component <span class="arithmatex">\(k\hat{d}\)</span> and thus the net force is simply </p>
+<div class="arithmatex">\[F_{\text{net}}=\int_{t_i+\epsilon(t)} k\hat{d}_i\]</div>
+<p>Since the direction of these forces are random <span class="arithmatex">\(\theta_i\)</span> but constant in <span class="arithmatex">\(k\)</span>, we can reason that <span class="arithmatex">\(F_{\text{net}}\to 0\)</span> as <span class="arithmatex">\(t\to\infty\)</span> so we get an emergent conservation law! </p>
+<p>The probability of a force being at some point <span class="arithmatex">\(p=(x_t,y_t)\)</span> should then be higher in this regime, can be written as </p>
+<div class="arithmatex">\[P\big(F_{\epsilon(p_t)}\big)=\int_{t_i+\epsilon(t)} \epsilon(p_t)\rho(x,y,t)\]</div>
+<p>which should not be 0 in the small time window, but decay exponentially in time, i.e., <span class="arithmatex">\(P\big(F_{\epsilon(p_t)}\big) \to 0\)</span> as <span class="arithmatex">\(t\to t_c\)</span>. This makes sense since we expect the net force to vanish, but if there were always some non-zero probability of a force at a point, then we might have non uniformity in force concentration and perhaps the conservation would not hold.</p>
+<p>Moving to the large timescale regime, i.e., for <span class="arithmatex">\(t&gt;t_c\)</span> the probability of our force “popping up” at any given point <span class="arithmatex">\(p_t=(x_t,y_t)\)</span> goes to 0 for sufficiently large time windows. However, since for any point <span class="arithmatex">\(p_t\)</span> we can find a small window where the dynamics converge to the <span class="arithmatex">\(t\leq t_c\)</span> regime, it should be the case that </p>
+<div class="arithmatex">\[F_{\text{total net}}=\sum_{j=0}^n \bigg(\int_{t_j+\epsilon_j(t)} \textbf{F}(\textbf{r})\,dr \bigg)=0\]</div>
+<p>and hence globally the forces cancel out. This shouldn't be surprising since the directions of the forces are uniformly random and constant and hence every direction the baby can shoot, will have been shot in. </p>
+<p><strong>Conclusion</strong> 
+At this point I've said everything I wanted to about the equations, my derivations, and reasoning without making any explicit and tedious calculations! I've also answered most of the guiding questions I proposed at the start. All that is left is to have a discussion about what physics has already, or, could emerge from the model. To conclude I'll imagine a few scenarios and see what I can find. Suppose our geometry, i.e., our boundary wasn't fixed, but instead could be pushed by our forces. Then, we'd essentially arise at a system that looks strikingly similar to a gas in a box that can expand and push the boundaries. In that case, we'd likely find solely from this model's predictions, that the box would scale uniformly since the internal net force is 0 and directions are equally likely. There are more connections to be made, specifically in discussing the evolution of our density, the regime changes, the transition in behavior at different scales, the force collapsing, etc., but for now I'll leave it there.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

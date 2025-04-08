@@ -1,0 +1,1073 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://Koruption.github.io/pure-conjecture/An%20Ergodic%20Measure%20of%20Geometric%20Flows-%20A%20Metric-Free%20Approach%20to%20Curvature%20Evolution%20via%20Iterated%20Transformations/">
+      
+      
+        <link rel="prev" href="../A%20Physical%20Model%20of%20a%20Bubbling%20Baby/">
+      
+      
+        <link rel="next" href="../Random%20Leaves%20-%20An%20Effective%20Model%20of%20Stochastic%20Trees/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>An Ergodic Measure of Geometric Flows A Metric Free Approach to Curvature Evolution via Iterated Transformations - Pure Conjecture</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Pure Conjecture" class="md-header__button md-logo" aria-label="Pure Conjecture" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Pure Conjecture
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              An Ergodic Measure of Geometric Flows  A Metric Free Approach to Curvature Evolution via Iterated Transformations
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Koruption/pure-conjecture" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Pure Conjecture" class="md-nav__button md-logo" aria-label="Pure Conjecture" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Pure Conjecture
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Koruption/pure-conjecture" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pure Conjecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A%20Cheap%20Steady-State%20Approximation%20to%20Volterra%20Equations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    A Cheap Steady State Approximation to Volterra Equations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A%20Physical%20Model%20of%20a%20Bubbling%20Baby/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    A Physical Model of a Bubbling Baby
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    An Ergodic Measure of Geometric Flows  A Metric Free Approach to Curvature Evolution via Iterated Transformations
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    An Ergodic Measure of Geometric Flows  A Metric Free Approach to Curvature Evolution via Iterated Transformations
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      Background
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concept
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#some-general-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Some General Definitions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geometric-horizons-and-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Geometric Horizons and Convergence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definitions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classifying-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classifying Maps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definitions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definitions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#an-ergodic-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      An Ergodic Action
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#symmetry-group-conjectures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Symmetry Group Conjectures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Symmetry Group Conjectures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#computational-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Computational Notes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-analysis-and-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Analysis and Results
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation Analysis and Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#note-figures-1-2-from-left-to-right" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note: Figures 1 &amp; 2 from left to right
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#note-figures-3-4-from-left-to-right" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note: Figures 3 &amp; 4 from left to right
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#note-figures-5-6-7-from-left-to-right" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note: Figures 5, 6, &amp; 7 from left to right
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connections-and-implications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connections and Implications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparative-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparative Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Random%20Leaves%20-%20An%20Effective%20Model%20of%20Stochastic%20Trees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Random Leaves   An Effective Model of Stochastic Trees
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      Background
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concept
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#some-general-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Some General Definitions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geometric-horizons-and-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Geometric Horizons and Convergence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definitions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classifying-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classifying Maps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definitions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definitions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#an-ergodic-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      An Ergodic Action
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#symmetry-group-conjectures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Symmetry Group Conjectures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Symmetry Group Conjectures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#computational-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Computational Notes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-analysis-and-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Analysis and Results
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation Analysis and Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#note-figures-1-2-from-left-to-right" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note: Figures 1 &amp; 2 from left to right
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#note-figures-3-4-from-left-to-right" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note: Figures 3 &amp; 4 from left to right
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#note-figures-5-6-7-from-left-to-right" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note: Figures 5, 6, &amp; 7 from left to right
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connections-and-implications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connections and Implications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparative-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparative Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>An Ergodic Measure of Geometric Flows  A Metric Free Approach to Curvature Evolution via Iterated Transformations</h1>
+
+<h4 id="overview">Overview</h4>
+<hr />
+<p>I present a novel metric-free framework for measuring the average geometric evolution of a manifold under iterative transformations. This framework provides a new perspective on the long-term geometric behavior of iterative mappings by bridging concepts from measure theory, dynamical systems, and ergodic theory. It introduces new stability measures independent of traditional metrics, develops a variational method called "Ropes" for classifying geometrically conserving transformations, and establishes a foundation for future group-theoretic extensions.</p>
+<p>The results derived here have natural applications in areas where metric-based approaches are impractical, such as cosmology, manifold learning, and computational geometry. The framework is computationally efficient, conceptually simple, and broadly adaptable, making it suitable for integration into discrete PDE analysis, dynamical system modeling, and data-driven geometric methods. This approach is particularly valuable in high-dimensional manifolds, complex dynamical systems, and scenarios where traditional curvature-based methods are computationally intractable.</p>
+<p>Finally, I present numerical results showcasing key aspects of the framework, demonstrating its ability to capture geometric evolution and stability in chaotic maps such as the Logistic Map and Henon Map. These results reinforce the theoretical findings and illustrate the framework’s potential as a practical tool for analyzing iterative transformations.</p>
+<h4 id="background">Background</h4>
+<hr />
+<p>Traditional approaches to geometric evolution rely on explicit curvature tensors and PDE evolution equations. In contrast, this work develops a measure-theoretic approach that entirely avoids metric dependence. By constructing an expectation-based evolution measure, we establish a stability framework applicable to iterated transformations and ergodic flows on compact manifolds. This approach is novel because it reframes curvature evolution as a measure evolution problem over iterated transformations rather than relying on explicit metric structures. </p>
+<p>A common question in differential geometry is, given a manifold <span class="arithmatex">\(M\)</span>(base manifold) with metric <span class="arithmatex">\(g_{ij}\)</span> and some transformation <span class="arithmatex">\(T_{T(\textbf{p})}: M \to N\)</span>mapping <span class="arithmatex">\(M\)</span> into (possibly onto) some other manifold <span class="arithmatex">\(N\)</span>, how does this transformation affect the geometry of the base manifold? One way is to look at how the curvature changes under this transformation, which is to say, how the vectors in the tangent spaces <span class="arithmatex">\(T(\textbf{p})\)</span> at each point <span class="arithmatex">\(\textbf{p}\)</span> of the base manifold change under the transformation. Typically, this measuring would be done by comparing the metric(s) <span class="arithmatex">\(g_{ij}\)</span> in the base manifold to the metric(s) <span class="arithmatex">\(g'_{ij}\)</span> in the target manifold <span class="arithmatex">\(N\)</span>. This is typically done by <strong><em>pulling back</em></strong> the metric <span class="arithmatex">\(g'_{ij}\)</span> onto M and comparing the two there. In other cases, studying a geometric flows on the manifold. While, this is elegant, for non-trivial geometries and non-isometric transformations, computing these comparisons or even finding a closed form of the original metric becomes increasingly challenging and requires solving challenging partial differential equation.</p>
+<h4 id="concept">Concept</h4>
+<hr />
+<p>Rather than relying on a metric-based approach, we can establish a smooth global averaged measure for tracking geometric change in a way that is metric independent. The key here is to develop a tool akin to statistical mechanics which let us infer global changes from averaging the evolution of local behavior. Typically, problems in geometry are structured in such as way that all the relevant information is encoded in the metrics themselves, however with careful reframing, similar information can be retrieved from mappings, providing a new means of analysis. Recall that under a transformation <span class="arithmatex">\(T: M \to N\)</span>, the <em>Jacobian</em> of <span class="arithmatex">\(T\)</span> is the differential <em>pushforward</em> of T, denoted as</p>
+<div class="arithmatex">\[
+dT_p:T_pM\to T_{T(p)}N
+\]</div>
+<p>which we identify as a transformation taking tangent vectors at points in <span class="arithmatex">\(M\)</span>, to tangent vectors at <span class="arithmatex">\(T(p)\)</span> in N. In local coordinates we define the Jacobian as </p>
+<p>$$ J_i^a = \frac{\partial T^a}{\partial x^i}$$. </p>
+<p>Now in a purely abstract setting, we might not be so concerned with these derivates, but more so in how the volume elements transform with it, which tells us something about the transformation <span class="arithmatex">\(T\)</span> i.e., namely whether it's an isometry, conformal, or neither. However, if our goal is to get an average sense of how the global geometry changes under the mapping, we can consider how the tangent spaces are changing under it, evaluated at sampled points on the manifold, build up a global picture, and ask “what happens over time?” </p>
+<p>As expected, simply averaging over our geometry gives us limited information without a proper reference to contrast with and a notion of convergence and boundedness. If we consider an unchanged manifold as being in a sort of initial “geometric state”, then we can view a mapping as a state evolution of the manifold, and if we apply iterative mappings, our averaging takes on a slightly different role, namely as an averaging of changes over evolutions of the geometric states. In this sense, any convergence or boundedness in the average sense is directly tied to the stabilization of geometric state. Thus, we'll need a way of defining a metric-free averaging measure and ensure that it is bounded when the averages are finite. Since mappings can induce singularities, we'll also need to address them in a way that ensures the measure is controlled.  </p>
+<h4 id="some-general-definitions">Some General Definitions</h4>
+<hr />
+<p>Below are a list of definitions which will be used throughout the remainder of the paper. For relevance, the definitions specific to individual proofs are omitted here and will be provided alongside the proofs they are required in. </p>
+<p><strong>1. Singularity Set:</strong>
+For a compact manifold <span class="arithmatex">\(M\)</span> and some mapping <span class="arithmatex">\(T:M\to M^{'}\)</span> we define the singularity set as </p>
+<div class="arithmatex">\[\omega_{\uparrow}=\{x\in M \,\,\vert\,\,T(x)\notin M\,\,\text{or}\,\,\ ||\nabla T(x)||\to\infty\}\]</div>
+<p>which is the set of points that avoid blowups and singularities. Then the set of open set points of <span class="arithmatex">\(M\)</span> on which <span class="arithmatex">\(T\)</span> is well-behaved is the restricted open set </p>
+<div class="arithmatex">\[\Omega=\{x_i\}_{i\in M\setminus\omega_{\uparrow}}\]</div>
+<p><strong>2. The Averaged Jacobian Measure</strong> 
+Let <span class="arithmatex">\(M\)</span> be a compact manifold, and let <span class="arithmatex">\(T:M\to M^{'}\)</span> be a smooth transformation. The Averaged Jacobian Measure over an open subset <span class="arithmatex">\(A\subseteq M\)</span> is defined as </p>
+<div class="arithmatex">\[\mu(T) = \frac{1}{N} \sum_{i=1}^N \delta_{J_T(x_i)}\]</div>
+<p>where <span class="arithmatex">\(J_T(x_i)\)</span> is the Jacobian <strong>determinant || or norm</strong> at sampled points <span class="arithmatex">\(x_i\in A\)</span>.</p>
+<p><strong>3. Iterate Mapping</strong>
+Given a compact manifold <span class="arithmatex">\(M\)</span> and a continuous map <span class="arithmatex">\(T:M\to M^{'}\)</span> we define a smooth iterative map as <span class="arithmatex">\(T^n=T\circ T^{n-1}\)</span> of order <span class="arithmatex">\(n\)</span>. It's helpful to think of this as a sequence of mappings, where any indexed map is <span class="arithmatex">\(T^k=T\circ T^{k-1}\)</span>, where <span class="arithmatex">\(k\le n\)</span>. </p>
+<p><strong>4. Averaged Jacobian Sequence</strong>
+Given a compact manifold <span class="arithmatex">\(M\)</span>, a continuous map <span class="arithmatex">\(T:M\to M^{'}\)</span> with smooth iterates <span class="arithmatex">\(T^n\)</span> and measure <span class="arithmatex">\(\mu(T(x_i))\)</span> we define the sequence of measures under iteration as <span class="arithmatex">\(\mu_n=\{\mu_{i}(T^i)\}_{i\in n}\)</span>. When taken in the limit to infinity, we'll write this as <span class="arithmatex">\(\mu_{\infty}\)</span>. </p>
+<hr />
+<p>We introduce the notion of iterate maps to study the geometric state evolutions of our manifold over time. Where each iterate effectively evolves <span class="arithmatex">\(M\)</span> into some new state <span class="arithmatex">\(M^{'}\)</span>. Then, the evolutionary flow can be seen as the expectation of our averaging measure per iterate. I will often refer to the iterate in the present tense and past iterates as "histories".   </p>
+<p><strong>Theorem (Expectation Flow Limit):</strong> 
+Let <span class="arithmatex">\(T:M\to M^{'}\)</span> be a smooth homeomorphic transformation on a compact manifold <span class="arithmatex">\(M\)</span>. Let <span class="arithmatex">\(\mu(T^n)\)</span> be the Averaged Jacobian Measure for iterates <span class="arithmatex">\(T^n(x)\)</span>. Suppose:</p>
+<ol>
+<li><span class="arithmatex">\(M\)</span> is compact, ensuring total variational boundedness.</li>
+<li><span class="arithmatex">\(\mu(T)\)</span> is defined on a partition of unity, ensuring <span class="arithmatex">\(\sigma-\)</span>finiteness.</li>
+<li><span class="arithmatex">\(T\)</span> avoids singularities on a measurable subset <span class="arithmatex">\(A\subseteq M\)</span>. </li>
+</ol>
+<p>Then, the expectation flow satisfies: <span class="arithmatex">\(\lim_{n\to\infty} \mathbb{E}\left[\mu_n\right]=\mathbb{E}\left(\lim_{n\to\infty}\mu_n\right)\)</span>.</p>
+<p><strong>Proof</strong>: Define the set of sampled points as elements from the subset of the restricted singularity exclusion, i.e., <span class="arithmatex">\(A\subset\Omega\)</span> where <span class="arithmatex">\(\Omega=\{x_i\}_{i\in M\setminus\omega_{\uparrow}}\)</span>. Since <span class="arithmatex">\(M\)</span> is compact, <span class="arithmatex">\(\mu\)</span> can be constructed on a partition of unity of <span class="arithmatex">\(M\)</span> and hence, it has a finite measure. Thus, the measure must be bounded above by the total variation on <span class="arithmatex">\(M\)</span> such that: </p>
+<div class="arithmatex">\[|\mu(A)|\leq ||\mu||\]</div>
+<p>By compactness and existence of the partition of unity, there must exist an integrable function <span class="arithmatex">\(g\)</span> such that our measure is locally bounded on <span class="arithmatex">\(M\)</span>. Since <span class="arithmatex">\(M\)</span> is compact, any function <span class="arithmatex">\(g\)</span> defined as a weighted sum over partitioned subsets of <span class="arithmatex">\(M\)</span> remains integrable in <span class="arithmatex">\(\text{L}^1(M)\)</span>, ensuring that the total measure remains finite: </p>
+<div class="arithmatex">\[|\mu(x)|\leq g(x)\,\, , \,\,\forall x\in A\,, \forall i\]</div>
+<p><strong>Lemma 1</strong>
+Let <span class="arithmatex">\(T\)</span> be a continuous map <span class="arithmatex">\(T:M\to M^{'}\)</span> and <span class="arithmatex">\(\mu(T)\)</span> our averaging measure on an open set of points <span class="arithmatex">\(A\subseteq\Omega\)</span>. Then it follows that the measure of the map is bounded by an integrable function: </p>
+<div class="arithmatex">\[|\mu(T(x_i))|\leq g^{'}(T(x_i))\]</div>
+<p>for <span class="arithmatex">\(T(x_i)\in T(A)\)</span> and <span class="arithmatex">\(x_i\in A\)</span>. </p>
+<p><strong>Lemma 2</strong>
+Let <span class="arithmatex">\(T^n\)</span> be an iterated map defined as <span class="arithmatex">\(T^n=T\circ T^{n-1}(x_i)\)</span> for <span class="arithmatex">\(n\in \mathbb{Z}\)</span> and <span class="arithmatex">\(x_i\in A\)</span>, we can define a sequence of averages as the sequence of finite measures <span class="arithmatex">\(\{\mu(T^n)\}\)</span>. Then the finite sum of measures </p>
+<div class="arithmatex">\[\sum_i|\mu_i(T^i)|\leq \sum_i g_i(T^i)\leq\sum_i||\mu_i||\]</div>
+<p>is bounded with finite measure. The compactness of <span class="arithmatex">\(M\)</span> and partition of unity guarantees this remains bounded when <span class="arithmatex">\(A\)</span> covers <span class="arithmatex">\(M\)</span>, i.e., <span class="arithmatex">\(A=\Omega\)</span>. Since <span class="arithmatex">\(\mu\)</span> is a locally finite on <span class="arithmatex">\(A\subset\Omega\)</span> and certainly on <span class="arithmatex">\(\Omega\)</span>, it follows that <span class="arithmatex">\(\mu\)</span> is <span class="arithmatex">\(\sigma-\)</span>finite on <span class="arithmatex">\(\Omega\)</span>. By construction, the dominating function <span class="arithmatex">\(g_i\)</span> is integrable over <span class="arithmatex">\(M\)</span>.</p>
+<p>This allows us to extend our finite definition to infinite sums: </p>
+<div class="arithmatex">\[\mu_{\infty}=\sum_{i=0}^{\infty}|\mu_i(T^i)|\]</div>
+<p>We can define the finite average over our finite measures <span class="arithmatex">\(\mu_i\)</span> as </p>
+<div class="arithmatex">\[\mathbb{E}\left[\mu_{N}\right]=\frac{1}{i+1}\sum_{i=0}^{N}|\mu_i(T^i)|\]</div>
+<p>where we denote the measure of the <span class="arithmatex">\(n^{th}\)</span> measure <span class="arithmatex">\(\mu_n(T^n)\)</span> as <span class="arithmatex">\(\mu_N\)</span>. Now taking the limit and applying DCT we have: </p>
+<div class="arithmatex">\[\lim_{n\to\infty}\mathbb{E}\left[\mu_n\right]=\mathbb{E}\left(\lim_{n\to\infty}\sum_{n=0}^{\infty}|\mu_n(T^n)|\right)\]</div>
+<p>Thus, we conclude that the limit of the Expectation commutes: </p>
+<div class="arithmatex">\[\lim_{n\to\infty} \mathbb{E}[\mu(T^n)] = \mathbb{E}\left(\lim_{n\to\infty}\mu_n\right)\]</div>
+<p>These result holds significant implications for the long-term behavior of geometric flows, as it guarantees the convergence of the expectation of the measure under repeated transformations, assuming the sequence of measures converges. This foundational result ensures that, under appropriate conditions, the average geometric behavior stabilizes and that the Expectation Flow does not diverge, even in the presence of potentially chaotic transformation sequences. </p>
+<p>These equations themselves share a similar form to those used to study dynamical systems where one often follows the trajectories of the system in phase space, tracking deformations over time. This suggests some analog to the study of stability in dynamical systems, but in a more generalized and global way which applies to manifolds. While the methods of dynamical systems are typically concerned with trajectories and qualitative vs. quantitative measure, this method provides a way to achieve both and do so in a local and global setting. </p>
+<h4 id="geometric-horizons-and-convergence">Geometric Horizons and Convergence</h4>
+<hr />
+<p>We can now ask what happens to the expectation of our averages under successive iterates. If the measure sequence <span class="arithmatex">\(\mu_{n}\)</span> diverges, is our expectation flow guaranteed to diverge or might it somehow remain finite by selectively averaging. Certainly, if an iterative mapping introduces more singularities than stable points for large histories, then the measures sequence <span class="arithmatex">\(\mu_{n}\)</span> would necessarily diverge. However, the singularity set guarantees the measure sequences won't blow up. If we remove the restrictions and let <span class="arithmatex">\(\Omega\)</span> act as a cover on <span class="arithmatex">\(M\)</span>, our flow as is our averaging measures are free to diverge. </p>
+<p>When <span class="arithmatex">\(\mu_{n}\to k\)</span> and <span class="arithmatex">\(k&gt;0\)</span> averaging measures in the sequence collapse to the same constant <span class="arithmatex">\(k\)</span>. This means the average change under each successive iterate <span class="arithmatex">\(T^{m}\)</span> becomes symmetric in <span class="arithmatex">\(M\)</span> for <span class="arithmatex">\(m&gt;N\)</span>, i.e., the change under <span class="arithmatex">\(T^{m}\)</span> becomes fixed for large <span class="arithmatex">\(N\)</span> and no additional iterate will move the average. From this we can derive an approximation on the order of the expectation as <span class="arithmatex">\(k\leq\mathbb{E}[\mu_{n}]\)</span> and <span class="arithmatex">\(\mathbb{E}[\mu_{n}]\sim\mathcal{O}(km)\)</span> where <span class="arithmatex">\(m\)</span> is the "symmetric index" of the sequence after which each measure is uniform in <span class="arithmatex">\(k\)</span>. We say symmetric index to convey the fact that a symmetry of the iterates has been uncovered at index <span class="arithmatex">\(m\)</span>. </p>
+<p>Now when <span class="arithmatex">\(\mu_{n}\to 0\)</span> and averaging measures vanish, implying that the Jacobians vanish on the sampled points. This can be thought of as every subsequent iterative map <span class="arithmatex">\(T^{k+1}\)</span> is "flattening" after some index <span class="arithmatex">\(k\)</span>. Note that this does not necessarily imply <span class="arithmatex">\(\mathbb{E}(\mu_{n})\to 0\)</span> since we are taking the sum of the limit of the measure sequence, in order for this to be true every measure mush vanish, not just in the limit. We can think of this as a sort of conservation law, i.e., if the expectation flow is 0, the geometry is not changing under successive iteration. So far we've developed a framework for analyzing geometric state changes under iterative mappings, but we haven't considered what mappings might induce convergence or boundedness of our flow. Thus, we'll need to show under what conditions the geometric states are preserved under an expectation flow. </p>
+<h4 id="definitions">Definitions</h4>
+<hr />
+<p><strong>3.Dispersion Metric</strong>
+Given a compact manifold <span class="arithmatex">\(M\)</span>, a smooth sequence of continuous mappings <span class="arithmatex">\(T^n=T\circ T^{n-1}\)</span> where <span class="arithmatex">\(T:M\to M^{'}\)</span>, and a sequence of averaged Jacobian measures <span class="arithmatex">\(\mu_n\)</span>, we define the mean-free dispersion metric as: </p>
+<div class="arithmatex">\[d_{\mathcal{F}}(\mu_i,\mu_j)=|\mathbb{E}[\mu_j^2]-(\mathbb{E}[\mu_i]^2)|\]</div>
+<p>which measures the variance between any two measures in the sequence. This allows us to understand how the <span class="arithmatex">\(\mu_n\)</span> measure sequence behaves in terms of its spread or convergence.</p>
+<p><strong>4. Dispersion Measure</strong>
+Given a compact manifold <span class="arithmatex">\(M\)</span>, a smooth sequence of continuous mappings <span class="arithmatex">\(T^n=T\circ T^{n-1}\)</span> where <span class="arithmatex">\(T:M\to M^{'}\)</span>, and a sequence of averaged Jacobian measures <span class="arithmatex">\(\mu_n\)</span>, with a metric <span class="arithmatex">\(d_{\mathcal{F}}(\mu_i,\mu_j)\)</span>. The dispersion measure <span class="arithmatex">\(\sigma^2(\mu_n)\)</span> quantifies the overall spread of the sequence of Jacobian measures, <span class="arithmatex">\(\mu_n\)</span>, and is defined as:</p>
+<div class="arithmatex">\[\sigma^2(\mu_r)=\frac{1}{N}\sum_i^N d_{\mathcal{F}}(\mu_r,\mu_i)^2\]</div>
+<p>which measures the relative spread from the initial geometric "state" of the manifold. </p>
+<hr />
+<p><strong>Theorem (Dispersion Measure Boundedness):</strong> Let <span class="arithmatex">\(T^n=T\circ T^{n-1}\)</span> be an iterated map on a compact manifold <span class="arithmatex">\(M\)</span>, where <span class="arithmatex">\(T:M\to M^{'}\)</span> is smooth. Let <span class="arithmatex">\(\mu_{\infty}=\{\mu_i(T^i)\}_{i\in\mathbb{Z}}\)</span> be the sequence of averaged Jacobian measured defined over the sequence of iterates <span class="arithmatex">\(T^n\)</span>. If the dispersion measure <span class="arithmatex">\(\sigma^2(\mu_n)\)</span> converges, then the transformation sequence <span class="arithmatex">\(T^n\)</span> is bounded over all iterates, i.e., </p>
+<div class="arithmatex">\[\sup_n|\mu_n|\lt\infty\]</div>
+<p><strong>Proof:</strong> Let <span class="arithmatex">\(r&gt;n\)</span> be the reference geometric state of <span class="arithmatex">\(M\)</span>. Assume <span class="arithmatex">\(T^{n}\)</span> is unbounded, then it follows that, <span class="arithmatex">\(\mathbb{E}\left[\mu_r(T\circ T^{r-1})\right]\to\infty\)</span>, since the limit introduces infinite accumulations <span class="arithmatex">\(\lim_{r\to\infty}(1/(N-r))\sum_r |\mu_r|\)</span> over measures of iterates. </p>
+<p><strong>Lemma 1:</strong> If <span class="arithmatex">\(T^{k}\)</span> is unbounded at after kth iterate on a collection of open sets <span class="arithmatex">\(A\subseteq M\)</span>, then </p>
+<div class="arithmatex">\[\sup_{x\in M}||J_{T^{k}}(x)||=\mu_k(T^k)\to\infty,\,\,\forall k\gt k-1\]</div>
+<p>for <span class="arithmatex">\(x\in A\)</span>. Then the expectation <span class="arithmatex">\(\mathbb{E}[\mu_{\infty}]\)</span> cannot be finite.</p>
+<p><strong>Lemma 1 Proof:</strong> Since <span class="arithmatex">\(\mu_{\infty}\)</span> summation is defined as </p>
+<div class="arithmatex">\[\mu_{\infty}=\sum_{i=0}^{\infty}|\mu_i(T^i)|\]</div>
+<p>and noting that <span class="arithmatex">\(\mu_i\)</span>'s are defined by the averaged Jacobians,</p>
+<p>we partition the sum for large <span class="arithmatex">\(N\)</span> for terms up to <span class="arithmatex">\(k-1\)</span> and onward by <span class="arithmatex">\(u_{k-1}\)</span> and <span class="arithmatex">\(u_{N-k}\)</span>, to get </p>
+<div class="arithmatex">\[\mu_{\infty}=\mu_{k-1}+\mu_{N-K}\]</div>
+<p>and since <span class="arithmatex">\(T^k\)</span> is unbounded after the kth iterate, i.e., <span class="arithmatex">\(\mu_k(T^k)\to\infty\)</span>, we conclude that if <span class="arithmatex">\(T^k\)</span> is unbounded, then the expectation over the entire sequence of measures is unbounded. </p>
+<div class="arithmatex">\[\mathbb{E}\left(\lim_{n\to\infty}\mu_n\right)\to\infty\]</div>
+<p><strong>Continued Proof:</strong> Applying our metric <span class="arithmatex">\(d_{\mathcal{F}}(\mu_n,\mu_{r})\)</span>, we write the dispersion measure <span class="arithmatex">\(\sigma^2(\mu_n)\)</span> as </p>
+<div class="arithmatex">\[\sigma^2(\mu_n)=\frac{1}{N}\sum_{r&gt;n}^N d_{\mathcal{F}}(\mu_n,\mu_r)^2\]</div>
+<p>Since <span class="arithmatex">\(T^r\)</span> is unbounded in the <span class="arithmatex">\(r^{th}\)</span> iteration, we have </p>
+<div class="arithmatex">\[d_{\mathcal{F}}(\mu_n,\mu_r)=\left| \mathbb{E}\left[\mu_r^2\right]-\mathbb{E}\left[\mu_n\right]^2\right|\]</div>
+<p>with <span class="arithmatex">\(\mathbb{E}\left[\mu_r^2\right]\to\infty\)</span> we conclude that <span class="arithmatex">\(\sigma^2(\mu_N)\)</span> must diverge as <span class="arithmatex">\(n\to\infty\)</span> by definition and expectation growth in <span class="arithmatex">\(r\)</span>. Thus, if the dispersion measure <span class="arithmatex">\(\sigma^2(\mu_n)\)</span> converges, then <span class="arithmatex">\(T^n\)</span> is bounded. </p>
+<h4 id="classifying-maps">Classifying Maps</h4>
+<hr />
+<p>Naturally we might ask what types of maps lead to constant or vanishing expectation flows, or divergence. Traditional approaches describe these as mappings which preserve the metric. In this case we'll construct a similar tool for determining whether a map will induce a specific type of long-term expectation behavior. For this, we'll introduce a new construct called a "Rope" which tracks the shape of expectation flows over histories. Formally, it is a smooth interpolating function defined on the sampled points used in our averaging measures.</p>
+<h4 id="definitions_1">Definitions</h4>
+<hr />
+<p><strong>Rope:</strong> Given a compact manifold <span class="arithmatex">\(M\)</span>, a smooth sequence of continuous mappings <span class="arithmatex">\(T^n=T\circ T^{n-1}\)</span> where <span class="arithmatex">\(T:M\to M^{'}\)</span>, and a sequence of averaged Jacobian measures <span class="arithmatex">\(\mu_n\)</span>, we define a function <span class="arithmatex">\(\psi(x)\)</span> as </p>
+<div class="arithmatex">\[\psi(x)=\int_{\Omega}w_i\rho_i(x) \,d\mu\]</div>
+<p>where <span class="arithmatex">\(w_i\)</span> are weights defined by the averages of the Jacobians under a iterate <span class="arithmatex">\(T^i\)</span> evaluated at the points on the open set <span class="arithmatex">\(\Omega\subseteq M\)</span> and <span class="arithmatex">\(\rho(x)\)</span> is a smooth polynomial interpolating function. </p>
+<hr />
+<p>Intuitively, we can imagine "roping" points from the averaging measure, where the averages themselves contribute to the shape of the rope near that point. The long-term behavior of the transformation determines whether the rope 'tightens'—indicating geometric stabilization—or 'snaps,' signaling a breakdown in geometric preservation over iterations. Formally, this provides a way to track the evolution of the system's geometric behavior across iterations. It essentially acts as a measure of how much the transformation's geometry ‘stretches’ or ‘compresses’ the manifold, and its behavior encapsulates both the transformation's impact on the local structure and the global trend over time. The Rope Equation serves as a tool for capturing long-term geometric stability in iterated transformations. While traditional methods rely on explicit metric curvature tensors or Ricci flow evolution, the Rope approach provides an alternative that does not depend on a predefined metric structure. Instead, it quantifies how transformations preserve or distort the underlying manifold geometry using a variational approach, making it particularly useful in non-metric spaces or high-dimensional transformations where curvature evolution is computationally intractable.</p>
+<p>This contrasts with classical approaches such as Ricci flow, which requires solving differential equations governing curvature evolution. Ricci flow methods perform well in cases where explicit metrics are available and smoothly defined, allowing direct computation of curvature evolution. However, they become impractical in scenarios where metric structures are unknown, singular, or computationally prohibitive—such as in manifold learning, high-dimensional geometric optimization, and chaotic dynamical systems, where transformations are governed more by measure-theoretic distributions than by smooth metric structures. The Rope Equation instead provides a local measure of geometric conservation using variational principles, making it an attractive tool for tracking stability in a broad class of iterative transformations.</p>
+<p>By leveraging the measure-theoretic framework developed in this paper, the Rope approach provides a metric-free variational method for analyzing geometric evolution. Unlike classical differential geometry, which relies on explicit metric structures, the Rope method extracts stability properties directly from the measure distributions of transformations, extending its applicability to non-metric spaces, chaotic dynamics, and high-dimensional optimization problems where traditional methods break down.</p>
+<hr />
+<h4 id="an-ergodic-action">An Ergodic Action</h4>
+<p>We have discussed histories informally up until this point, I'll now formally define it as the action over iterates </p>
+<div class="arithmatex">\[\mathcal{S_F}=\frac{1}{\mu_{\infty}}\int_\Omega \psi_id\mu\]</div>
+<p>where the <span class="arithmatex">\(\frac{1}{\mu_{\infty}}\)</span> is a "weighting over histories" and where <span class="arithmatex">\(\psi_{i}d\mu_{i}\)</span> is the Rope under the <span class="arithmatex">\(T^i\)</span> iterate with averaging measure <span class="arithmatex">\(\mu_{i}\)</span>. We construct the Lagrangian as </p>
+<div class="arithmatex">\[\mathcal{L}(\mu_i,\psi_i,\rho_i,x_i)=\int_\Omega \log(\lambda_i) w_i\rho_i(x)d\mu_i\]</div>
+<p>where <span class="arithmatex">\(\lambda_i=\text{Rank}(J_{T_i}(x))\)</span>. Using the variational principle, we can derive the following Rope Equation: </p>
+<div class="arithmatex">\[\frac{\delta\mathcal{S_F}}{\delta\psi_i}-\int_\Omega\frac{\delta \mathcal{L}}{\delta\psi_i}d\mu_i=0\]</div>
+<p>which can be rewritten with substitutions as </p>
+<div class="arithmatex">\[\frac{1}{\mu_{\infty}+\epsilon}=\int_\Omega\log(\lambda_i)w_i\rho_i(x)d\mu_i\]</div>
+<p>note that we have introduced an arbitrarily small <span class="arithmatex">\(\epsilon\)</span> to handle convergence to 0 in <span class="arithmatex">\(\mu_{\infty}\)</span>. It's clear that if the measure sequence diverges our ropes will necessarily vanish, thus non-zero variations of the actions preserve ropes i.e., they remain positive. </p>
+<p><strong>Corollary 1 (Rope Classification Theorem):</strong> Given a compact manifold <span class="arithmatex">\(M\)</span>, a smooth sequence of continuous mappings <span class="arithmatex">\(T^n=T\circ T^{n-1}\)</span> where <span class="arithmatex">\(T:M\to M^{'}\)</span>, and a sequence of averaged Jacobian measures <span class="arithmatex">\(\mu_n\)</span>. <span class="arithmatex">\(T\)</span> is Rope Preserving if and only if <span class="arithmatex">\(\delta \mathcal{S_F}\gt 0\)</span>.</p>
+<p><strong>Conjecture 2:</strong> Given a compact manifold <span class="arithmatex">\(M\)</span>, a smooth sequence of continuous mappings <span class="arithmatex">\(T^n=T\circ T^{n-1}\)</span> where <span class="arithmatex">\(T:M\to M^{'}\)</span>, and a sequence of averaged Jacobian measures <span class="arithmatex">\(\mu_n\)</span>. Then any solution to the rope equation is bounded by <span class="arithmatex">\(\mu_{\infty}\)</span></p>
+<h3 id="symmetry-group-conjectures">Symmetry Group Conjectures</h3>
+<hr />
+<p>The study of iterative mappings naturally leads one to ask whether symmetries are emergent or always exist. In cases where the geometric evolution of our manifolds exhibits periodic or recurrent behaviors, we should be able to define an algebraic structure which produces different states of the system over some number of iterations. Similarly, for convergent flows, there should be a natural group structure induced by the mappings.</p>
+<p><strong>Conjecture 1:</strong> Given a compact manifold <span class="arithmatex">\(M\)</span>, let <span class="arithmatex">\(T:M\to M^{'}\)</span> be a continuous and <span class="arithmatex">\(T^n=T\circ T^{n-1}\)</span> the iterative map. If <span class="arithmatex">\(\mathbb{E}\left[\mu_n\right]\to k\)</span> where <span class="arithmatex">\(k\geq 0\)</span> then there exists a group of transformation <span class="arithmatex">\(\mathcal{G^n_F}\)</span> of order <span class="arithmatex">\(n\)</span> whose elements are defined by <span class="arithmatex">\(\{g_i\cdot g_k \\,\,\, |\,\,\,g_i(T^k):T^k\to T\circ T^{k}\,\,\,\text{and}\,\,\, \mathbb{E}\left[\mu_{(k+i)\leq n}\right]\leq k\}\)</span>, where the index <span class="arithmatex">\(n\)</span> is determined by convergence of the averaging measure. The group action of <span class="arithmatex">\(\mathcal{G}^n_F\)</span> is defined by function composition. Thus, The set of iterated transformations forms a structured algebraic subset of a diffeomorphism group, constrained by the measure-theoretic evolution law.</p>
+<p><strong>Conjecture 2:</strong> Given a compact manifold <span class="arithmatex">\(M\)</span>, let <span class="arithmatex">\(T:M\to M^{'}\)</span> be a continuous and <span class="arithmatex">\(T^n=T\circ T^{n-1}\)</span> the iterative map. If a function <span class="arithmatex">\(\phi(x_i)\)</span> defined over the open set <span class="arithmatex">\(A\subseteq\Omega\)</span> on <span class="arithmatex">\(M\)</span> satisfies the <strong>Rope Equation</strong>, and the <strong>Dispersion Measure</strong> <span class="arithmatex">\(\sigma^2(\mu_n)\)</span> is bounded up to <span class="arithmatex">\(k\leq n\)</span>, then <span class="arithmatex">\(\phi(x_i)\)</span> is invariant under <span class="arithmatex">\(T\)</span> up to <span class="arithmatex">\(k\)</span> iterates, and its symmetry group is <span class="arithmatex">\(\mathcal{G_F^k}\)</span>.</p>
+<p><strong>Conjecture 3:</strong> If iterated transformations evolve under bounded expectation flow, then their spectral properties must satisfy stability constraints. Specifically, the eigenvalues of iterated Jacobians must remain in a bounded spectral region, suggesting a non-trivial ergodic constraint on the evolution process.</p>
+<h4 id="computational-notes">Computational Notes</h4>
+<hr />
+<p>The bulk of the computational complexity for the technique comes from computing the derivatives in the Jacobian, which can be made fast, but grows linearly <span class="arithmatex">\(O(n)\)</span> with the number of <span class="arithmatex">\(n -\)</span>points sampled from the region of the manifold <span class="arithmatex">\(M\)</span> you are studying. For setups where you are applying iterative maps, this dependence grows as <span class="arithmatex">\(O(nm)\)</span> where <span class="arithmatex">\(m\)</span> is the number of iterations. Note that the number of points <span class="arithmatex">\(n\)</span> should be the same for each mapping, i.e., it's fixed for all iterations <span class="arithmatex">\(m\)</span>. Assuming the manifold is discretized into an <span class="arithmatex">\(n \,\text{x} \,n\)</span> grid, the overall complexity would typically be <span class="arithmatex">\(O(mn^2)\)</span>, but because of the average doesn't require all points in the grid, we can reduce the polynomial complexity to something linear.</p>
+<p>The method could be extended to incorporate more geometric information from the spectral decompositions of the Jacobians, but this would require diagonalization at each step in the averaging process, which can be costly depending on your environment. However, independent nature of the technique lends itself to parallelization naturally. In theory, you could batch sample points in your region across different threads and compute the Jacobians and their respective decompositions in parallel, then join them back for averaging on the main thread.</p>
+<h4 id="implementation-analysis-and-results">Implementation Analysis and Results</h4>
+<hr />
+<p>The numerical results demonstrate the power and robustness of our framework when applied to chaotic systems such as the 2D Logistic Map and the Henon Map. These transformations were chosen specifically to showcase how our Expectation Flow method, in conjunction with the Lyapunov exponent estimation, can capture and analyze the long-term behavior of chaotic dynamical systems. Let us discuss the key findings from these results. Since Expectation Flow introduces a new method for measuring transformation stability, traditional error analysis is not well-defined due to the lack of a direct ground truth metric-based counterpart. Instead, we verify numerical stability by ensuring that Expectation Flow produces consistent long-term convergence across multiple trials within chaotic systems.</p>
+<p>To validate the theoretical framework, we implemented numerical experiments using 3 different two-dimensional transformation:</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(T(\theta,\phi)=\left[\theta+\epsilon \sin(\phi), \phi+\delta\sin(\theta)\right]\)</span> where <span class="arithmatex">\(\epsilon = 1500\)</span> and <span class="arithmatex">\(\delta = 820\)</span> serve as deformation parameters. We'll call this Example 1. </p>
+</li>
+<li>
+<p>Logistic Map with Convex Coupling: </p>
+</li>
+</ol>
+<div class="arithmatex">\[\begin{align}x_{n+1}=(1-\epsilon)r\,x_n(1-x_n)+\epsilon \,r\,y_n(1-y_n) \\ y_{n+1}=\epsilon\,r\,x_n(1-x_n)+(1-\epsilon)r\,y_n(1-y_n)\end{align}\]</div>
+<ol>
+<li>Henon Map: </li>
+</ol>
+<div class="arithmatex">\[\begin{gather}x_{n+1}=1-ax^2_n+by_n \\ y_{n+1}=cx_n\end{gather}\]</div>
+<p>These transformations were chosen to showcase handling of non-trivial geometric evolutions which might traditionally be challenging in a geometric setting. In addition, the Logistic and Henon maps were chosen to study how the Expectation Flow predicts and captures long-term boundedness in chaotic systems from a purely geometric perspective. </p>
+<p>The framework was implemented using a sampling-based approach to compute averaged Jacobian measures. The algorithm:</p>
+<ol>
+<li>Samples points from the manifold</li>
+<li>Computes Jacobians at sampled points using finite differences</li>
+<li>Averages the Jacobian norms to approximate μ_i</li>
+<li>Iterates the transformation and repeats</li>
+</ol>
+<p><strong>Example 1</strong> </p>
+<div style="display: flex; align-items: center;">
+<img src="https://raw.githubusercontent.com/Koruption/Ergodic-Measure-of-Geometric-Change/refs/heads/main/Plots/Geometric_Evolution_Under_Iterated_Maps.png" alt="My Image" style="display: inline-block; vertical-align: middle; width: 50%; height: auto;">
+
+<img src="https://raw.githubusercontent.com/Koruption/Ergodic-Measure-of-Geometric-Change/refs/heads/main/Plots/Pointwise_Differences_Under_Iterated_maps.png" alt="My Image" style="display: inline-block; vertical-align: middle; width: 50%; height: auto;">
+</div>
+
+<h5 id="note-figures-1-2-from-left-to-right">Note: Figures 1 &amp; 2 from left to right</h5>
+<p>Performance analysis over 10 trials with 2000 samples and 100 mappings showed consistent computation times averaging around 5.5 seconds per trial batch. The slight variations in performance (±100ms) likely result from adaptive sampling and numerical integration procedures.</p>
+<p>The observed convergence behavior of the expectation flow aligns with the theoretical boundedness results. The dispersion measure remains finite across iterations, confirming the expectation flow theorem. The expectation flow <span class="arithmatex">\(E[μ_n]\)</span> shows rapid initial growth followed by convergence to a steady state around value 360 (Figure 1). This behavior suggests that:</p>
+<ol>
+<li>The transformation induces significant initial geometric deformation</li>
+<li>The deformation stabilizes after approximately 100 iterations</li>
+<li>The limiting behavior supports Conjecture 3 regarding boundedness by <span class="arithmatex">\(μ_∞\)</span></li>
+</ol>
+<p>The point-wise differences under iteration (Figure 2) reveal interesting dynamics:</p>
+<ul>
+<li>Raw differences (blue) show high-frequency oscillations around mean ≈ 38200</li>
+<li>The moving average (red) demonstrates remarkable stability</li>
+<li>Standard deviation remains approximately constant through iteration</li>
+</ul>
+<p>This stability in point-wise differences, combined with the convergent expectation flow, provides numerical evidence for the existence of geometric preservation properties predicted by the Rope Equation.</p>
+<p><strong>Logistic Map</strong>
+The first transformation tested was the Logistic Map with Convex Coupling, a standard chaotic map that exhibits rich dynamical behavior. Figures 3 and 4 show the Expectation Flow and Pointwise Differences for the Logistic Map, respectively. We observe that the expectation flow quickly converges, indicating that the system stabilizes after a number of iterations, as the geometric deformation induced by the transformations reaches an equilibrium.</p>
+<div style="display: flex; align-items: center;">
+<img src="https://raw.githubusercontent.com/Koruption/Ergodic-Measure-of-Geometric-Change/refs/heads/main/Plots/Geometric%20Evolution%20Iterative%20Maps%20Logistic%20Maps.png" alt="My Image" style="display: inline-block; vertical-align: middle; width: 50%; height: auto;">
+
+<img src="https://raw.githubusercontent.com/Koruption/Ergodic-Measure-of-Geometric-Change/refs/heads/main/Plots/Pointwise%20Difference%20Logistic%20Map.png" alt="My Image" style="display: inline-block; vertical-align: middle; width: 50%; height: auto;">
+</div>
+
+<h5 id="note-figures-3-4-from-left-to-right">Note: Figures 3 &amp; 4 from left to right</h5>
+<p>The <strong>Lyapunov exponent trace</strong> converges at a similar rate, confirming that our framework captures the dynamics of the system in both a qualitative and quantitative manner. Specifically, we notice that the Lyapunov exponent steadily decreases until it stabilizes, pointing to a predictable level of divergence, which aligns with the expectations from chaotic system theory.</p>
+<p>Our Expectation Flow’s convergence is further supported by the fact that the dispersion measure remains finite, confirming the boundedness predicted by our Expectation Flow Limit theorem. This suggests that, despite the inherent chaotic nature of the logistic system, our framework provides an accurate estimate of the long-term geometric evolution of the system.</p>
+<p><strong>Henon Map</strong>
+Next, we applied our framework to the Henon Map, another canonical example of a chaotic dynamical system. The geometric evolution under iterative applications of the Henon Map is shown in <strong>Figure 6</strong>. This plot demonstrates that, after an initial phase of rapid change, the system stabilizes, with the Expectation Flow converging to a constant value. This result mirrors the observations made with the Logistic Map.</p>
+<p><img src="https://raw.githubusercontent.com/Koruption/Ergodic-Measure-of-Geometric-Change/refs/heads/main/Plots/Geometric%20Evolution%20w%3A%20Lyapunov%20Exponent%20Henon%20Map.png" alt="My Image" style="width: 100%; height: 400px;"></p>
+<div style="display: flex; align-items: center;">
+<img src="https://raw.githubusercontent.com/Koruption/Ergodic-Measure-of-Geometric-Change/refs/heads/main/Plots/Geometric%20Convergence%20Henon%20Map%202.png" alt="My Image" style="display: inline-block; vertical-align: middle; width: 50%; height: auto;">
+
+<img src="https://raw.githubusercontent.com/Koruption/Ergodic-Measure-of-Geometric-Change/refs/heads/main/Plots/Pointwise%20Difference%20Henon%20Map.png" alt="My Image" style="display: inline-block; vertical-align: middle; width: 50%; height: auto;">
+</div>
+
+<h5 id="note-figures-5-6-7-from-left-to-right">Note: Figures 5, 6, &amp; 7 from left to right</h5>
+<p>One of the most significant aspects of the Henon Map analysis is the direct comparison between the Lyapunov exponent and the Expectation Flow. As shown in <strong>Figure 5</strong>, the Lyapunov exponent reaches its steady-state after a series of iterations, confirming that the system's divergence behavior stabilizes over time. This result has deep implications, as it indicates that the geometric behavior of the system, when averaged over the manifold, follows a predictable and bounded trajectory that mirrors the underlying dynamical system’s stability properties.</p>
+<p>Additionally, we observe that the Lyapunov Exponent Convergence is consistent with the expectations from the system's inherent chaotic nature. The exponential divergence of nearby trajectories observed in the Lyapunov exponent is captured by our Expectation Flow method, emphasizing the utility of our framework in chaotic dynamics analysis.</p>
+<p>The striking similarity in convergence behavior between Expectation Flow and Lyapunov exponents is a key insight that suggests a deeper structural relationship between geometric measure evolution and dynamical chaos stability. Traditionally, Lyapunov exponents are used to quantify local sensitivity to initial conditions, measuring the exponential divergence of nearby trajectories in phase space. This has been the dominant tool for analyzing chaos and stability in dynamical systems.</p>
+<p>However, Expectation Flow offers an alternative perspective by tracking the global, measure-theoretic deformation of the transformation sequence over time. Rather than measuring local stretching rates, Expectation Flow provides a coarse-grained but stable estimate of long-term geometric transformation behavior. The fact that both measures stabilize in parallel suggests that Expectation Flow may encode information about trajectory divergence in a way that complements Lyapunov exponents.</p>
+<p>This connection raises an important question: Can Expectation Flow serve as a generalized or integrated form of the Lyapunov exponent? If so, this would provide a powerful tool for analyzing chaotic systems in cases where direct computation of Lyapunov exponents is difficult or where local trajectory divergence does not fully capture the system's stability properties.</p>
+<p>Furthermore, this result suggests that Expectation Flow could be used to extend chaos diagnostics beyond classical Lyapunov analysis, potentially offering a new framework for studying geometric stability in high-dimensional and non-traditional dynamical systems. Future work could explore how Expectation Flow correlates with other chaotic measures, such as Kolmogorov-Sinai entropy and fractal dimension, to establish a more comprehensive metric-free approach to analyzing chaos and stability in complex transformations.</p>
+<h4 id="connections-and-implications">Connections and Implications</h4>
+<hr />
+<p>The strong correlation between <strong>Expectation Flow</strong> and the <strong>Lyapunov Exponent</strong> in both the <strong>Logistic</strong> and <strong>Henon Maps</strong> underscores a crucial point: our method not only provides a new way of understanding the stability of geometric transformations but also offers a new form of measuring and interpreting dynamical systems. The fact that the Expectation Flow converges in parallel with the Lyapunov exponent suggests that this approach might be a valuable tool for the study of long-term stability in systems where traditional methods (like curvature evolution) might fall short.</p>
+<p>These results also imply that <strong>Expectation Flow</strong> could be used as a diagnostic tool for more complex systems, particularly those with no straightforward metric or geometric interpretation. Since our method relies solely on averaging the Jacobians of transformations, it bypasses the need for direct metric evaluations, offering a more computationally efficient and theoretically elegant solution for understanding long-term dynamical behavior.</p>
+<p>Lastly, these results have significant implications for group theoretic studies and ergodic theory. They suggest that our framework could lead to new insights into the relationship between geometric flows and the group actions that define them. We anticipate that future work will extend this analysis to higher-dimensional systems, multi-phase flow behaviors, and non-linear dynamical systems where chaotic interactions and long-term stability need to be understood and quantified.</p>
+<h4 id="comparative-analysis">Comparative Analysis</h4>
+<table>
+<thead>
+<tr>
+<th><strong>Method</strong></th>
+<th><strong>What It Measures</strong></th>
+<th><strong>Strengths</strong></th>
+<th><strong>Limitations</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ricci Flow</strong></td>
+<td>Curvature evolution over time</td>
+<td>Good for smooth metric spaces</td>
+<td>Computationally prohibitive for chaotic transformations</td>
+</tr>
+<tr>
+<td><strong>Lyapunov Exponents</strong></td>
+<td>Local trajectory divergence</td>
+<td>Standard chaos diagnostic</td>
+<td>Cannot track global stability</td>
+</tr>
+<tr>
+<td><strong>Expectation Flow</strong></td>
+<td>Global stability of transformations</td>
+<td>Captures long-term evolution without a metric</td>
+<td>Requires a measure-theoretic formulation</td>
+</tr>
+</tbody>
+</table>
+<p>Traditional metric-based methods such as Ricci Flow are well-suited for tracking curvature evolution in smooth settings but become computationally intractable in highly chaotic or complex transformation sequences. Similarly, Lyapunov exponents are useful for quantifying local trajectory divergence but fail to provide a direct measure of long-term geometric stability. Expectation Flow, by contrast, captures the global evolution of transformation stability without requiring an explicit metric, making it a powerful alternative for analyzing geometric behavior in chaotic and high-dimensional systems.</p>
+<h4 id="summary">Summary</h4>
+<hr />
+<p>The numerical results validate the theoretical framework while demonstrating its practical applicability. The observed convergence behavior in both Expectation Flow and pointwise differences suggests that the transformation TTT belongs to a class of mappings that exhibit stable geometric evolution under iteration. This work establishes a metric-free approach to curvature evolution by leveraging measure-theoretic stability, offering a new perspective on how geometric transformations behave over time.</p>
+<p>By unifying concepts from differential geometry, ergodic theory, and dynamical systems, this framework provides a generalized approach to studying geometric evolution without reliance on traditional metric structures. This opens new avenues for both theoretical and applied research, particularly in areas where metric-based methods are computationally intractable or conceptually limiting, such as computational geometry, manifold learning, and the study of large-scale structures in cosmology. The framework’s adaptability suggests potential extensions in chaotic system analysis, geometric data science, and high-dimensional transformation studies, making it a powerful tool for understanding iterative mappings across diverse mathematical and scientific domains.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

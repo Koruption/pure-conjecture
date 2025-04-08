@@ -1,0 +1,689 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://Koruption.github.io/pure-conjecture/Random%20Leaves%20-%20An%20Effective%20Model%20of%20Stochastic%20Trees/">
+      
+      
+        <link rel="prev" href="../An%20Ergodic%20Measure%20of%20Geometric%20Flows-%20A%20Metric-Free%20Approach%20to%20Curvature%20Evolution%20via%20Iterated%20Transformations/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Random Leaves An Effective Model of Stochastic Trees - Pure Conjecture</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Pure Conjecture" class="md-header__button md-logo" aria-label="Pure Conjecture" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Pure Conjecture
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Random Leaves   An Effective Model of Stochastic Trees
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Koruption/pure-conjecture" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Pure Conjecture" class="md-nav__button md-logo" aria-label="Pure Conjecture" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Pure Conjecture
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Koruption/pure-conjecture" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pure Conjecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A%20Cheap%20Steady-State%20Approximation%20to%20Volterra%20Equations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    A Cheap Steady State Approximation to Volterra Equations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A%20Physical%20Model%20of%20a%20Bubbling%20Baby/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    A Physical Model of a Bubbling Baby
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../An%20Ergodic%20Measure%20of%20Geometric%20Flows-%20A%20Metric-Free%20Approach%20to%20Curvature%20Evolution%20via%20Iterated%20Transformations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    An Ergodic Measure of Geometric Flows  A Metric Free Approach to Curvature Evolution via Iterated Transformations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Random Leaves   An Effective Model of Stochastic Trees
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Random Leaves   An Effective Model of Stochastic Trees
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      Background
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-indexing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase Indexing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definitions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#closing-remarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closing Remarks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-outlook" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Outlook
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acknowledgments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acknowledgments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-thoughts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Thoughts
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      Background
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-indexing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase Indexing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definitions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#closing-remarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closing Remarks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-outlook" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Outlook
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acknowledgments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acknowledgments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-thoughts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Thoughts
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Random Leaves   An Effective Model of Stochastic Trees</h1>
+
+<h4 id="overview">Overview</h4>
+<hr />
+<p>Recently, while on a walk, I was inspired to develop a mathematical model for trees—one that captures their natural probabilistic evolution rather than relying solely on deterministic or purely fractal-based approaches. While fractal and recursive models effectively describe self-similar structures, they often exhibit static or fully deterministic behavior, limiting their ability to represent the inherent randomness observed in natural growth patterns.</p>
+<p>In this work, I propose a framework that introduces stochastic variability into tree modeling, allowing for a more dynamic representation of their growth. The mathematical concepts required to understand this approach are minimal, however a pedestrian familiarity of physics, variational methods, and PDEs will serve you well.</p>
+<h4 id="background">Background</h4>
+<p>A short observation of any tree should be sufficient to convince us that some fundamental law of diminishing proportions exists between branches. I propose then that any tree can be partitioned into "phases" or what others might call, depth. Intuitively, the phases of the tree simply make up the partitions of it in which each partition contains the set of branches which are roughly some fraction of the average of the branches which came before it in phase, i.e., given some branch <span class="arithmatex">\(b\)</span> the length of it is such that if <span class="arithmatex">\(a\)</span> is its parent branch, then the length of <span class="arithmatex">\(\mathcal{l}_{b}=a/k\)</span> for <span class="arithmatex">\(k\in\mathbb{R}\)</span>. From here on out, i'll take a constructivist approach, as if building a tree as we go.</p>
+<h4 id="phase-indexing">Phase Indexing</h4>
+<p>In a computational environment, we'd hope for some sort of stopping condition, after which our tree would no longer grow. This can be defined in a measured way, by placing an upper bound on limiting behavior and stopping, say after the average branch length per phase reaches <span class="arithmatex">\(|l-\epsilon|\lt L\)</span>. However, continuing with the hypothesis of diminishing proportions, we seek a more general formula which  </p>
+<h4 id="definitions">Definitions</h4>
+<hr />
+<p><strong>Branch Length</strong>: The length of the <span class="arithmatex">\(i^{\text{th}}\)</span> branch for the <span class="arithmatex">\(j^{\text{th}}\)</span> phase/depth <span class="arithmatex">\(\ell_{i,j}\)</span>is defined recursively as: </p>
+<div class="arithmatex">\[\ell_{i,j}=\ell_{i-1,j}-\left(\ell_{i-1,j}\right)^{\frac{1}{n}}\cdot\eta^{\frac{1}{2}}\]</div>
+<p>where <span class="arithmatex">\(\eta\sim\mathcal{N}(\mu,\sigma)\)</span> and where <span class="arithmatex">\(\mu=\ell_{i-1,j}\)</span> and <span class="arithmatex">\(\sigma=k/j\)</span> where <span class="arithmatex">\(k-\)</span>is a spread speed factor determining how quickly the branch's variability in length collapses to a specific value and <span class="arithmatex">\(j-\)</span>is the current depth or phase of the tree. Lastly, note that <span class="arithmatex">\(n-\)</span>is a decay factor which physically might encode something like available sunlight, weather conditions, etc., i.e., it might be expressible in those variables, for now we can just as well assume <span class="arithmatex">\(n=1\)</span> or some other value for that matter.  </p>
+<p>We can write this more generally by refactoring and expanding recursively to get the more general form: </p>
+<div class="arithmatex">\[\ell_{i,j}=\ell_{0,j}\prod_{k=1}^i \left(1-\ell_{k-1,j}^{\frac{1}{n}-1}\,\,\cdot\,\,\eta^{\frac{1}{2}}\right)\]</div>
+<p>Now, recall that for "small" <span class="arithmatex">\(x\)</span> we have the first order approximation for <span class="arithmatex">\(1-x\approx e^{-x}\)</span> and thus, letting <span class="arithmatex">\(x=\ell_{k-1,j}^{\frac{1}{n}-1}\,\,\cdot\,\,\eta^{\frac{1}{2}}\)</span> and assuming <span class="arithmatex">\(\eta^{\frac{1}{2}}\)</span> is sufficiently small we have: </p>
+<div class="arithmatex">\[\ell_{i,j}=\ell_{0,j}\prod_{k=1}^ie^{-\ell_{k-1,j}^{\frac{1}{n}-1}\,\,\cdot\,\,\eta^{\frac{1}{2}}}\]</div>
+<p>It should be clear why the assumptions here should be true, for an organic tree, the rate at which branches vary shrinks quickly with the depth/phase of the tree. Considering that the number of observed phases required for the variability to shrink is countable, it must be the case that the distribution collapses quickly. Given this, we can finally rewrite the expression most compactly as the sum: </p>
+<div class="arithmatex">\[\ell_{i,j}=\ell_{0,j}\,\cdot\,e^{-\sum_{k=1}^i \ell_{k-1,j}^{\frac{1}{n}-1}\,\,\cdot\,\,\eta^{\frac{1}{2}}}\]</div>
+<p>from which it's easy to see that this converges as <span class="arithmatex">\(i\to\infty\)</span>. </p>
+<hr />
+<p><strong>Number of Branches</strong>: Typically the number of branches in a tree model is defined by a multiplicative power law relation which has some recursive dependence. Instead of assuming a power law growth model, we'll derive a growth equation which will tell us how the number of branches increases over time and what long term behavior will occur.</p>
+<p>Let <span class="arithmatex">\(n(q,t)\)</span> be the number of branches of the tree dependent on a generalized coordinate <span class="arithmatex">\(q-\)</span>representing the ambient environment ant <span class="arithmatex">\(t-\)</span>time. Now we assume that the tree seeks to maximize its own growth over time, thus we expect something like: </p>
+<div class="arithmatex">\[\begin{gather}
+\mathcal{S}=\int_{\Omega}\mathcal{L} \\ \\ \delta \mathcal{S}=0 
+\end{gather}\]</div>
+<p>Where <span class="arithmatex">\(\mathcal{L}\)</span> is the Lagrangian to be defined as follows: We expect the growth of the tree to be proportional to a "growth inertia" <span class="arithmatex">\(\frac{S}{2}(\partial_{tt} n)\)</span> and penalized by the spread of environmental resources and fluctuations <span class="arithmatex">\(\partial_{q_{i}}^2n\)</span> and subject to random environmental fluctuations in resources <span class="arithmatex">\(\eta(n)\)</span>. Lastly, we introduce a time-dependent resource source <span class="arithmatex">\(n^{\alpha p}\)</span>, thus we have the Lagrangian density: </p>
+<div class="arithmatex">\[\mathcal{L}=\frac{S}{2}(\partial_{t} n)^2-\sum_{i}\frac{1}{2}(\partial_{q_{i}}n)^2-R(n)-\eta(n)\]</div>
+<p>taking derivatives and applying the Euler-Lagrange equations we derive the governing equation: </p>
+<div class="arithmatex">\[\frac{S}{2}(\partial_{tt} n)-\sum_{i}(\partial_{q_{i}}^2n)-\frac{dR}{dn}-\frac{d\eta}{dn}=0\]</div>
+<p><strong>Deriving a Steady State Solution</strong>: We can derive a steady state solution to the governing equation as follows. For an environment in equilibrium we assume random fluctuations are negligible and thus <span class="arithmatex">\(\frac{d\eta}{dn}\approx 0\)</span>. Similarly, if the ambient environment becomes constant over in space, i.e., if changes in the environment vary in very slow way over the generalized coordinate <span class="arithmatex">\(q\)</span>, we have </p>
+<div class="arithmatex">\[\frac{\partial^2 n}{\partial t^2}\gg \sum_{i}\frac{\partial^2 n}{\partial q_{i}^2}\]</div>
+<p>from which we can rewrite the right-hand side as a multiple e.g., </p>
+<div class="arithmatex">\[\begin{gather*}
+\frac{\partial^2 n}{\partial t^2}- \sum_{i}\frac{\partial^2 n}{\partial q_{i}^2}=0 \\
+\frac{\partial^2 n}{\partial t^2}= \sum_{i}\frac{\partial^2 n}{\partial q_{i}^2}
+\end{gather*}\]</div>
+<p>approximating the right-hand side as a fractional multiple of the left <span class="arithmatex">\(\frac{\partial^2 n}{\partial t^2} \approx \frac{\epsilon}{S}n\)</span> we have </p>
+<div class="arithmatex">\[\frac{\partial^2 n}{\partial t^2}= \frac{\epsilon}{S}n-\alpha n^p\]</div>
+<p>Neglecting the last term in a steady-state, we recognize this has a general solution which we can write as </p>
+<div class="arithmatex">\[n(q,t)=\frac{1}{S^2}e^{\epsilon S}\]</div>
+<p>Now finally, we'll add back our source term. Because in a steady state we assumed the environment was constant, we assumed the resource source was no longer active and derived a solution without accounting for it. However, this is generally not true, so we'll add it to the solution above and derive the final equation for branch number as </p>
+<div class="arithmatex">\[n(q,t)=\frac{\epsilon}{S^2}e^{\epsilon S}-\alpha n^p\]</div>
+<p>Which after letting <span class="arithmatex">\(p=2\)</span> and adding back our fluctuations we can rearrange as </p>
+<div class="arithmatex">\[n(q,t)=\frac{N_{\text{max}}}{1+e^{-\epsilon s(t-t_{0})}}+\eta(n)\]</div>
+<p>which is a stochastic logistic growth.</p>
+<h3 id="closing-remarks">Closing Remarks</h3>
+<hr />
+<p>It’s my hope that this framework captures enough of the magic behind how trees grow and branch out—without bogging us down in an overly intricate or one-size-fits-all theory. We started with the observation that branches shrink in length the deeper we go and added a dash of randomness to mimic real-world variability. Then, by letting resource availability ebb and flow in a wave-like fashion, we gained a picture of trees that evolves in a manner closer to how they behave in nature.</p>
+<p>Admittedly, the formalism I used—wrapping things in a Lagrangian, deriving PDEs, and introducing a “growth inertia” term—might seem like a lot of heavy machinery for a simple question: “Why do tree branches get smaller, and how many branches does a tree have?” But in practice, these tools let us build a model flexible enough to capture the steady-state shape and the stochastics of the environment. Plus, it’s just fun to see how what feels like purely physical or mathematical techniques can reveal insights into a living, breathing structure—especially one as visually and conceptually fascinating as a tree.</p>
+<p>I hope these ideas spark further thought. Maybe you’ll be inspired to tweak the decay factor <span class="arithmatex">\(\eta\)</span>, or see what happens when <span class="arithmatex">\(\eta\)</span> doesn’t collapse quickly, or even simulate an entire forest that might reflect real data on climate shifts. This “effective model” approach is less about forging a universal theory of flora and more about painting a lifelike portrait of trees with the help of probability and calculus.</p>
+<h3 id="future-outlook">Future Outlook</h3>
+<hr />
+<ol>
+<li>
+<p><strong>Parameter Calibration</strong>: One potential next step is to gather empirical data—say from remote sensing or direct measurements of branch lengths—to calibrate the parameters <span class="arithmatex">\(k\)</span>, <span class="arithmatex">\(\eta\)</span>, and <span class="arithmatex">\(\sigma\)</span>. Doing so would link the model more tightly to specific tree species or environmental conditions.</p>
+</li>
+<li>
+<p><strong>Environmental Heterogeneity</strong>: Our PDE-based approach could be extended to incorporate spatial variations in light, moisture, or soil nutrients. This would push the model closer to real ecosystems, where the environment isn’t so uniform.</p>
+</li>
+<li>
+<p><strong>Multi-Species Interactions</strong>: Although I only considered the growth of a single tree (or a single species), there’s plenty of room to extend the formalism to model competition or cooperation between multiple plants—think root networks, symbiotic fungi, or even shading effects where multiple canopies overlap.</p>
+</li>
+<li>
+<p><strong>Wider Applications</strong>: We’ve talked about “trees” in the literal sense, but you might adapt this model to any branching structure under constraints—blood vessels, river networks, or even purely computational fractal generation with a dash of randomness. That’s the fun of these broad frameworks: they’re easy to remix.</p>
+</li>
+</ol>
+<h3 id="acknowledgments">Acknowledgments</h3>
+<hr />
+<p>I’d like to thank the many unsuspecting trees I wandered past for inspiring this line of thought. Nature offers boundless lessons if you pause to look long enough. Special appreciation also goes to the mathematicians and physicists who first introduced me to variational methods—they gave me a new lens for seeing just how universal these PDEs can be.</p>
+<h3 id="final-thoughts">Final Thoughts</h3>
+<hr />
+<p>Trees have always been a symbol of life and complexity. By weaving together probability, recursion, and the language of physics, we’ve taken one small step closer to demystifying them—while still honoring the inherent randomness and grandeur that make them so captivating in the first place. The hope is that others will build upon this framework, refine it, or use it in surprising ways. At the very least, may it encourage a second glance at the trees all around us—and maybe even a moment to imagine the equations dancing beneath their bark.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
